@@ -2,7 +2,9 @@ baseURL = "https://feed-dead-beef.netlify.com/"
 languageCode = "en-us"
 title = "feed dead beef"
 theme = "hermit"
-pygmentsCodeFences=true
+
+pygmentsCodeFences = true
+pygmentsUseClasses = true
 
 [taxonomies]
   series = "series"
