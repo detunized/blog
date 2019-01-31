@@ -1,5 +1,45 @@
-baseURL = "http://example.org/"
+baseURL = "http://detunized.net/"
 languageCode = "en-us"
-title = "My New Hugo Site"
-theme = "m10c"
+title = "feed dead beef"
+theme = "hermit"
 pygmentsCodeFences=true
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04"
+
+  gitUrl = "https://github.com/detunized/blog"
+
+  [[params.social]]
+    name = "github"
+    url = "https://github.com/detunized"
+
+  [[params.social]]
+    name = "telegram"
+    url = "http://t.me/detunized"
+
+  [[params.social]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/dmitryyakimenko"
+
+  [[params.social]]
+    name = "twitter"
+    url = "https://twitter.com/detunized_net"
+
+[menu]
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 10
+
+  [[menu.main]]
+    name = "Photo"
+    url = "/photo/"
+    weight = 20
+
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 30
