@@ -1,8 +1,13 @@
 ---
-title: Giving Go another chance
-date: 2019-01-19T23:00:00+01:00
-draft: false
-tags: [go, golang]
+title: "Giving Go another chance"
+description: I'm writing a simple time tracking tool and rediscovering Go at the same time.
+date: 2019-01-19
+published: true
+series:
+    - Making a time tracking tool in Go
+tags:
+    - go
+    - time tracking
 ---
 
 I decided to start tracking the time I spent on tasks a bit better than with a pen and a piece of paper. After a bit of searching I came across this [list](https://www.linuxlinks.com/timetrackers/). I tried all of the tools on it and I stuck with [timetrap](https://www.linuxlinks.com/timetrap/) for a while. But some things bugged me about it.
