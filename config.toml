@@ -4,6 +4,10 @@ title = "feed dead beef"
 theme = "hermit"
 pygmentsCodeFences=true
 
+[taxonomies]
+  series = "series"
+  tag = "tags"
+
 [params]
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
