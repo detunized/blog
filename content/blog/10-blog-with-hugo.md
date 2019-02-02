@@ -8,7 +8,7 @@ tags:
     - netlify
 ---
 
-I decided to resurrect my personal blog and not rely only solely on [dev.to](https://dev.to/detunized) for my blogging needs. Though, it's really pleasant to use dev.to for technical blogging, some aspects of it could be better. I don't like so much to type all my posts in the browser and would rather use a proper text editor. I also don't like to switch between preview and markdown view all the time. And I especially don't like to have no version control for my content.
+I decided to resurrect my personal blog and not rely solely on [dev.to](https://dev.to/detunized) for my blogging needs. Though, it's really pleasant to use dev.to for technical blogging, some aspects of it could be better. I don't like so much to type all my posts in the browser and would rather use a proper text editor. I also don't like to switch between preview and markdown view all the time. And I especially don't like to have no version control for my content.
 
 So far I've been just editing offline and pasting into the browser every 5 minutes to see what it looks like. When I'm done, I commit and then paste the final version and publish. When I find a typo, I fix, commit and publish again. I wanted to have a slightly different workflow.
 
