@@ -15,6 +15,9 @@ pygmentsUseClasses = true
   photo = ":slug"
 
 [params]
+  author = "Dmitry Yakimenko"
+  email = "detunized@gmail.com"
+
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
   dateformNum     = "2006-01-02"
