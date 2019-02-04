@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .Title }}</title>
+    <link href="{{ .Site.BaseURL }}/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="page">
+        <div id="content">
+            <div id="header">
+                {{ .Title }}
+                <a id="icon" class="icon" href="/">S</a>
+            </div>
+            {{ $imageHost := .Site.Params.imageHost }}
+            {{ $folder := .Params.folder }}
+            {{ range $image := .Params.images }}
+                <img class="photo" src="{{ $imageHost }}/galleries/{{ $folder }}/{{ $image }}" alt="{{ $image }}">
+            {{ end }}
+            <div id="navigation">
+                <div id="older">
+                    {{/* if page.previous */}}
+                        <a href="{{/* page.previous.url */}}">&larr; Previous</a>
+                    {{/* endif */}}
+                </div>
+                <div id="newer">
+                    {{/* if page.next */}}
+                        <a href="{{/* page.next.url */}}">Next &rarr;</a>
+                    {{/* endif */}}
+                </div>
+            </div>
+            {% include copyright.html %}
+        </div>
+    </div>
+</body>
+</html>

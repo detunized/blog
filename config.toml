@@ -18,6 +18,8 @@ pygmentsUseClasses = true
 
   gitUrl = "https://github.com/detunized/blog"
 
+  imageHost = "https://raw.seedhost.eu/detunized/detunized.net"
+
   [[params.social]]
     name = "github"
     url = "https://github.com/detunized"
