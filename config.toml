@@ -10,6 +10,10 @@ pygmentsUseClasses = true
   series = "series"
   tag = "tags"
 
+[permalinks]
+  posts = ":year-:month-:day-:slug"
+  photo = ":slug"
+
 [params]
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
