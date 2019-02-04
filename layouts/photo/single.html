@@ -19,16 +19,16 @@
                 <img class="photo" src="{{ $imageHost }}/galleries/{{ $folder }}/{{ $image }}" alt="{{ $image }}">
             {{ end }}
             <div id="navigation">
-                <div id="older">
-                    {{/* if page.previous */}}
-                        <a href="{{/* page.previous.url */}}">&larr; Previous</a>
-                    {{/* endif */}}
-                </div>
-                <div id="newer">
-                    {{/* if page.next */}}
-                        <a href="{{/* page.next.url */}}">Next &rarr;</a>
-                    {{/* endif */}}
-                </div>
+                {{- with .PrevInSection }}
+                    <div id="older">
+                        <a href="{{ .Permalink }}">&larr; Previous</a>
+                    </div>
+                {{ end }}
+                {{ with .NextInSection }}
+                    <div id="newer">
+                        <a href="{{ .Permalink }}">Next &rarr;</a>
+                    </div>
+                {{ end }}
             </div>
             {% include copyright.html %}
         </div>
