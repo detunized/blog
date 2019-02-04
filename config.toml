@@ -11,8 +11,8 @@ pygmentsUseClasses = true
   tag = "tags"
 
 [permalinks]
-  posts = ":year-:month-:day-:slug"
-  photo = ":slug"
+  posts = "/posts/:year-:month-:day-:slug"
+  photo = "/photo/:slug"
 
 [params]
   author = "Dmitry Yakimenko"
