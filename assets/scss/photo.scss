@@ -1,0 +1,141 @@
+/* Global settings */
+{{ $banner_width := 750 }}
+{{ $banner_border_width := 2 }}
+
+/* Calculate content_width = banner_border_width * 2 + banner_width */
+{{ $banner_border_width_times_2 := mul $banner_border_width 2 }}
+{{ $content_width := add $banner_border_width_times_2 $banner_width }}
+
+/* Shared elements */
+{{ $small_black_text_shadow := "text-shadow: 1px 1px 3px #000;" }}
+
+/* Reset */
+html, body, div, img, h2 {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+/* Global settings */
+* {
+    font-family: Georgia;
+    font-weight: normal;
+}
+
+/* Icon font (from http://icons.marekventur.de/) */
+@font-face {font-family:
+    'RaphaelIcons';
+    src: url('../fonts/raphaelicons-webfont.eot');
+    src: local('☺'),
+         url('../fonts/raphaelicons-webfont.woff') format('woff'),
+         url('../fonts/raphaelicons-webfont.ttf') format('truetype'),
+         url('../fonts/raphaelicons-webfont.svg#webfontKOf9F4sx') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Icon class (from http://icons.marekventur.de/) */
+.icon {
+    font-weight: normal;
+    font-style: normal;
+    line-height: normal;
+    font-family: 'RaphaelIcons';
+    font-size: 1.1em;
+    position: relative;
+    top: 0.1em;
+}
+
+body {
+    background-color: #444;
+}
+
+#page {
+}
+
+#content {
+    display: table;
+    margin: 0 auto;
+}
+
+{{ $header_color := "color: #eee;" }}
+
+#header {
+    margin-top: 0.2em;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px #000;
+    {{ $header_color }}
+}
+
+#header a {
+    text-decoration: none;
+    {{ $header_color }}
+}
+
+#header #icon {
+    float: right;
+}
+
+#navigation {
+    margin-top: 1em;
+
+    overflow: auto; /* This resets floats on "older" and "newer" link divs. Oh, CSS. */
+}
+
+#navigation a {
+    color: #eee;
+    {{ $small_black_text_shadow }}
+}
+
+#older {
+    float: left;
+}
+
+#newer {
+    float: right;
+}
+
+{{ $copyright_text := printf "color: #ddd; %s" $small_black_text_shadow }}
+
+#copyright {
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    text-align: right;
+    {{ $copyright_text }}
+}
+
+#copyright a {
+    {{ $copyright_text }}
+}
+
+#posts {
+    margin-top: 1.2em;
+}
+
+.post {
+    box-shadow: 2px 2px 6px #111;
+}
+
+.first_post {
+}
+
+.next_post {
+    margin-top: 1.5em;
+}
+
+.banner {
+    border: #fff solid {{ $banner_border_width }}px;
+}
+
+h2 {
+    padding: 2px 10px;
+
+    background-color: #fff;
+    color: #444;
+    text-shadow: 1px 1px 3px #555;
+}
+
+.photo {
+    border: 12px solid #fff;
+    margin-top: 1.8em;
+}

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ .Title }}</title>
-    <link href="{{ .Site.BaseURL }}/css/style.css" rel="stylesheet" type="text/css" />
+    {{ $style := resources.Get "scss/photo.scss" | resources.ExecuteAsTemplate "css/photo.css" . | toCSS | minify | fingerprint -}}
+    <link href="{{ $style.Permalink }}" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div id="page">
