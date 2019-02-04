@@ -1,13 +1,15 @@
 /* Global settings */
-{{ $banner_width := 750 }}
-{{ $banner_border_width := 2 }}
+$banner_border_width: 2px;
+$header_color: #eee;
 
-/* Calculate content_width = banner_border_width * 2 + banner_width */
-{{ $banner_border_width_times_2 := mul $banner_border_width 2 }}
-{{ $content_width := add $banner_border_width_times_2 $banner_width }}
+@mixin small_black_text_shadow() {
+    text-shadow: 1px 1px 3px #000;
+}
 
-/* Shared elements */
-{{ $small_black_text_shadow := "text-shadow: 1px 1px 3px #000;" }}
+@mixin copyright_text() {
+    color: #ddd;
+    @include small_black_text_shadow()
+}
 
 /* Reset */
 html, body, div, img, h2 {
@@ -57,18 +59,16 @@ body {
     margin: 0 auto;
 }
 
-{{ $header_color := "color: #eee;" }}
-
 #header {
     margin-top: 0.2em;
     font-size: 2.5em;
     text-shadow: 2px 2px 4px #000;
-    {{ $header_color }}
+    color: $header_color;
 }
 
 #header a {
     text-decoration: none;
-    {{ $header_color }}
+    color: $header_color;
 }
 
 #header #icon {
@@ -83,7 +83,7 @@ body {
 
 #navigation a {
     color: #eee;
-    {{ $small_black_text_shadow }}
+    @include small_black_text_shadow()
 }
 
 #older {
@@ -94,18 +94,16 @@ body {
     float: right;
 }
 
-{{ $copyright_text := printf "color: #ddd; %s" $small_black_text_shadow }}
-
 #copyright {
     margin-top: 1em;
     margin-bottom: 1em;
 
     text-align: right;
-    {{ $copyright_text }}
+    @include copyright_text()
 }
 
 #copyright a {
-    {{ $copyright_text }}
+    @include copyright_text()
 }
 
 #posts {
@@ -124,7 +122,7 @@ body {
 }
 
 .banner {
-    border: #fff solid {{ $banner_border_width }}px;
+    border: #fff solid $banner_border_width;
 }
 
 h2 {
