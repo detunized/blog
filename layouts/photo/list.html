@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Photo</title>
+
+    {{ with .OutputFormats.Get "rss" }}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+
+    <link href="{{ "TODO" }}/index.xml" rel="alternate" title="detunized.net/photo" type="application/rss+xml" />
+    {{ $style := resources.Get "scss/photo.scss" | resources.ExecuteAsTemplate "css/photo.css" . | toCSS | minify | fingerprint -}}
+    <link href="{{ $style.Permalink }}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="page">
+        <div id="content">
+            <div id="header">
+                <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+                <a id="icon" class="icon" href="{{ (.OutputFormats.Get "rss").Permalink }}">&AElig;</a>
+            </div>
+            <div id="posts">
+                {{ $imageHost := .Site.Params.imageHost }}
+                {{ $folder := .Params.folder }}
+                {{ $paginator := .Paginate (.Data.Pages) .Site.Params.photo.paginate }}
+                {{ range $index, $post := $paginator.Pages }}
+                    {{  $post_class := cond (eq $index 0) "first_post" "next_post" }}
+                    <div class="post {{ $post_class }}">
+                        <h2>{{ .Title }}</h2>
+                        <a href="{{ .Permalink }}">
+                            <img class="banner" src="{{ $imageHost }}/galleries/{{ .Params.folder }}/title.jpg" alt="{{ .Title }}">
+                        </a>
+                    </div>
+                {{ end }}
+            </div>
+            <div id="navigation">
+                <div id="older">
+                    {{ with $paginator.Next }}
+                        <a href="{{ .URL }}">
+                            &larr; Older
+                        </a>
+                    {{ end }}
+                </div>
+                <div id="newer">
+                    {{ with $paginator.Prev }}
+                        <a href="{{ .URL }}">
+                            Newer &rarr;
+                        </a>
+                    {{ end }}
+                </div>
+            </div>
+            {{ partial "photo/copyright.html" . }}
+        </div>
+    </div>
+</body>
+</html>

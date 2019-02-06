@@ -27,6 +27,10 @@ pygmentsUseClasses = true
 
   imageHost = "https://raw.seedhost.eu/detunized/detunized.net"
 
+  [params.photo]
+    paginate = 12
+    url = "/photo/"
+
   [[params.social]]
     name = "github"
     url = "https://github.com/detunized"

@@ -11,7 +11,7 @@
         <div id="content">
             <div id="header">
                 {{ .Title }}
-                <a id="icon" class="icon" href="/">S</a>
+                <a id="icon" class="icon" href="{{ .Site.Params.photo.URL | absURL }}">S</a>
             </div>
             {{ $imageHost := .Site.Params.imageHost }}
             {{ $folder := .Params.folder }}
