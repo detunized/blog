@@ -6,7 +6,6 @@ tags:
     - git
     - madness
     - reinventing the wheel
-    - nih syndrome
 ---
 
 The other day I invented myself a new headache: I wanted to merge a few libraries I've built over the years into one repo and refactor them together. It looks simple at first glance, copy all the files into subfolders, add and commit:
