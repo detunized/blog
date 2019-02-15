@@ -159,3 +159,5 @@ git gc --aggressive
 ```
 
 The resulting repo lives [here](https://github.com/detunized/password-manager-access). I feel like it was worth the time I put into that. It gave me an opportunity to learn more about the Git low level commands. And now I have a repo that I can browse with ease and don't need to jump between the branches every time I want to check some file history.
+
+The script I used could be found [here](https://gist.github.com/detunized/7c41718863ab94e7072f99a55a5bf9d4).
