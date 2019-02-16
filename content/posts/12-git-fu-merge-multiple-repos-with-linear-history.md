@@ -23,11 +23,11 @@ After trying some of those (not the Java though, no thank you) I realized they d
 
 Most of the approaches I found were not compatible with my goals. Usually people try to import a repo into a branch (usually by adding a `remote` from another repo), move all the files into a subfolder in one commit and then merge that branch into `master`. This creates one big commit where all the files get moved to a subfolder. And then another giant merge commit, where all the changes from one branch get copied to another branch. When you view such a repo on GitHub, you'd see that file history gets broken (`blame` still works though).
 
-I also discovered a built-in built-in command `git subtree` and it turns out it suffers from the same problems as all the third party tools I tried before that. So no go! Need to reinvent the wheel here and come up with my own solution.
+I also discovered a built-in command `git subtree` and it turns out it suffers from the same problems as all the third party tools I tried before that. So no go! Need to reinvent the wheel here and come up with my own solution.
 
-So, basically, I needed to find a way to merge all the repos without creating any merge commits. And I need to move the original files into subfolders. Tho Git tools come to mind: `cherry-pick` and `filter-branch`.
+So, basically, I needed to find a way to merge all the repos without creating any merge commits. And I needed to move the original files into subfolders. Two Git tools come to mind: `cherry-pick` and `filter-branch`.
 
-A sidenote. I used use Mercurial at work a few years back and it was great! The user experience on Mercurial is amazing. I kinda wish it didn't die a slow death and let the inferior product to take over the dev scene. As Mercurial was intuitive and user friendly as Git is powerful and versatile. Git is like a really twisted Lego set: you can build whatever you want out of it.
+A sidenote. I used to use Mercurial at work a few years back and it was great! The user experience on Mercurial is amazing. I kinda wish it didn't die a slow death and let the inferior product to take over the dev scene. As Mercurial was intuitive and user friendly as Git is powerful and versatile. Git is like a really twisted Lego set: you can build whatever you want out of it.
 
 So here's the plan:
 
@@ -40,7 +40,7 @@ So here's the plan:
 
 Easy peasy. Feel kinda masochistic today, so let's do in Bash.
 
-First, like always we need to make sure the whole script fails when any of the commands fails. This usually saves a lot of time when something goes wrong. And it usually does.
+First, like always we need to make sure the whole script fails when any command fails. This usually saves a lot of time when something goes wrong. And it usually does.
 
 ```bash
 #!/bin/bash
@@ -79,7 +79,7 @@ for repo in $repos; do
 done
 ```
 
-Let's go over it piece by piece. First, I import a repo into its own branch. `lastpass` repo would end up in a branch named `lastpass`. Nothing difficult so far.
+Let's go over it piece by piece. First, I import a repo into its own branch. The repo named `lastpass` end up in a branch named `lastpass`. Nothing difficult so far.
 
 ```bash
 git remote add $repo $REPO_DIR/repo
@@ -98,13 +98,13 @@ git filter-branch \
     $repo
 ```
 
-The `filter-branch` command is a multifunctional beast. It's possible to change the repo beyond any recognition with all the possible switches it provides. It's possible to FUBAR it too. Actually it's super easy. That's why it creates a backup under `refs/original/refs/heads` branch. To force the the backup to be overwritten if it's already there I specify `-f`.
+The `filter-branch` command is a multifunctional beast. It's possible to change the repo beyond any recognition with all the possible switches it provides. It's possible to FUBAR it too. Actually it's super easy. That's why Git creates a backup under `refs/original/refs/heads` branch. To force the the backup to be overwritten if it's already there I use the `-f` switch.
 
 When the `--tree-filter` switch is used, every commit is checked out to a temporary directory and using regular file operations I can rewrite the commit. So for every commit, I create a directory `.original/$repo` and move all the file into it using `rsync`.
 
-The `--mag-filter` switch allows me to rewrite the commit message. I'd like to add the repo name to the message. So that all the commits that are coming from the `lastpass` repo would look like `lastpass: original commit message`. For each commit the script would receive the commit message on `stdin` and whatever comes out to `stdout` would become the new commit message. In this case I use `cat` to join `prefix` and `stdin`(`-`). For some reason I couldn't figure out why simple `echo -n` wouldn't work, so I had to save the message prefix into a file.
+The `--mag-filter` switch allows me to rewrite the commit message. I'd like to add the repo name to the message, so that all the commits that are coming from the `lastpass` repo would look like `lastpass: original commit message`. For each commit the script would receive the commit message on `stdin` and whatever comes out to `stdout` would become the new commit message. In this case I use `cat` to join `prefix` and `stdin`(`-`). For some reason I couldn't figure out why simple `echo -n` wouldn't work, so I had to save the message prefix into a file.
 
-And the last bit with `--env-filter` is needed to reset the commit date to the original date (author date in Git terminology). If I didn't do, Git would change the timestamp to the current time. I didn't want that.
+And the last bit with `--env-filter` is needed to reset the commit date to the original date (author date in Git terminology). If I didn't do it, Git would change the timestamp to the current time. I didn't want that.
 
 Next step would be to copy all those commits to the `master` branch to flatten the history. There's no `master` branch yet. Let's make one. For some reason Git creates a branch with all the files added to the index. Kill them with `git rm`.
 
@@ -119,7 +119,7 @@ To copy the commits, I need to list them first. That is done with the `log` comm
 git log --pretty='%H' --author-date-order --reverse $repos
 ```
 
-This command produces a list of all the commit hashes sorted from the oldest to newest across all the branches I created earlier. The output of this step looks like this:
+This command produces a list of all the commit hashes sorted from the oldest to the newest across all the branches I created earlier. The output of this step looks like this:
 
 ```
 7d62b1272b4aa37f07eb91bbf46a33609d80155f
