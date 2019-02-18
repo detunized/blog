@@ -6,7 +6,7 @@ tags:
     - git
     - madness
     - failure
-    - trying-not-to-reinvent-the-wheel
+    - reposurgeon
 ---
 
 In a [comment](https://dev.to/610yesnolovely/comment/8nk8) to my previous [post]({{< ref "/posts/12-git-fu-merge-multiple-repos-with-linear-history.md" >}}) [@610yesnolovely](https://dev.to/610yesnolovely) mentioned a tool called [reposurgeon](https://gitlab.com/esr/reposurgeon) that is supposed to take care of the exact problem I had (merging a bunch of Git repos). I installed it and tried it out. I won't keep you in suspense here, it didn't work for me.
