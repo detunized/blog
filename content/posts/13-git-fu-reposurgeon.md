@@ -27,6 +27,8 @@ And the description:
 
 > List the last commit that refers to a ChangeLog file containing a specified string. (The trick here is that ? extends the singleton set consisting of the last eligible ChangeLog blob to its set of referring commits, and listonly notices the commits.)
 
+That makes zero sense to me, though I've spent quite a bit of time trying to understand the docs.
+
 To me this looks like a well run project. It seems to have good [pace of releases](http://www.catb.org/~esr/reposurgeon/NEWS), vast and detailed [documentation](http://www.catb.org/esr/reposurgeon/), clean and documented source code (I wouldn't put everything in [one 21k line file](https://gitlab.com/esr/reposurgeon/blob/master/src/goreposurgeon/goreposurgeon.go) though).
 
 What I think went wrong is that it's got too many very specific features and it tries to handle everything. Probably the author(s) have been spending too much time in their silo perfecting and adding features to their software.
