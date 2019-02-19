@@ -9,7 +9,7 @@ tags:
     - reposurgeon
 ---
 
-In a [comment](https://dev.to/610yesnolovely/comment/8nk8) to my previous [post]({{< ref "/posts/12-git-fu-merge-multiple-repos-with-linear-history.md" >}}) [@610yesnolovely](https://dev.to/610yesnolovely) mentioned a tool called [reposurgeon](https://gitlab.com/esr/reposurgeon) that is supposed to take care of the exact problem I had (merging a bunch of Git repos). I installed it and tried it out. I won't keep you in suspense here, it didn't work for me.
+In a [comment](https://dev.to/610yesnolovely/comment/8nk8) to my previous [post]({{< ref "/posts/0012-git-fu-merge-multiple-repos-with-linear-history.md" >}}) [@610yesnolovely](https://dev.to/610yesnolovely) mentioned a tool called [reposurgeon](https://gitlab.com/esr/reposurgeon) that is supposed to take care of the exact problem I had (merging a bunch of Git repos). I installed it and tried it out. I won't keep you in suspense here, it didn't work for me.
 
 I spent a bunch of time going through the giant [documentation page](http://www.catb.org/~esr/reposurgeon/reposurgeon.html), which seems to be both detailed and vague at the same time. It feels too formal and yet doesn't give you a good idea what the whole thing is about. There's a lot of terminology that is unique to this tool and not a lot of introduction into the lingo. There are very few examples of anything. No quick start section with trivial cases covered. Quite difficult to figure out where to start. I also didn't find a lot of resources online. Hardly any, actually. Not many people seem to use this tool.
 
