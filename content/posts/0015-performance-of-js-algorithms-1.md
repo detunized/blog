@@ -8,7 +8,7 @@ tags:
     - profiling
 ---
 
-I stumbled upon a [tweet](https://twitter.com/emmawedekind/status/1097855481052303360) and then a [post](https://dev.to/emmawedekind/breaking-down-javascript-solutions-to-common-algorithmic-questions-part-1-1228) by [Emma Wedekind](@emmawedekind). She goes over some solutions to most common interview questions for JavaScript positions. There are three different problems. And for each she offers a *brute force* and an *optimized* solution, where the latter is a shorter and more elegant version, that normally uses functional programming style over C-style loops. I wouldn't call them *brute force* and *optimized* though, rather *naive* and *elegant*.
+I stumbled upon a [tweet](https://twitter.com/emmawedekind/status/1097855481052303360) and then a [post](https://dev.to/emmawedekind/breaking-down-javascript-solutions-to-common-algorithmic-questions-part-1-1228) by [Emma Wedekind](https://dev.to/@emmawedekind). She goes over some solutions to most common interview questions for JavaScript positions. There are three different problems. And for each she offers a *brute force* and an *optimized* solution, where the latter is a shorter and more elegant version, that normally uses functional programming style over C-style loops. I wouldn't call them *brute force* and *optimized* though, rather *naive* and *elegant*.
 
 The *naive* solution anyone can write as soon as they grasp the very basic concepts of the language and understand the problem. The *elegant* solution requires a better knowledge of the standard library. The code becomes clearer and more succinct. But that sometimes comes with a performance penalty that is not very obvious at the first glance. In this post I wanted to go over some of those less obvious points.
 
