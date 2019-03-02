@@ -33,7 +33,7 @@ DIR=${DL_DIR:-files}
 if [[ "$1" == "-h" || "$1" == "--help" ]]; then
     echo "USAGE: dl [dir [host]]"
     exit
-fi;
+fi
 
 if [[ "$1" != "" ]]; then
     DIR="$1"
@@ -41,7 +41,7 @@ if [[ "$1" != "" ]]; then
     if [[ "$2" != "" ]]; then
         HOST="$2"
     fi
-fi;
+fi
 
 REMOTE="$HOST:$DIR/"
 
