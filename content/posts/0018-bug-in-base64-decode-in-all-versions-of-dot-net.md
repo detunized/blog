@@ -3,10 +3,10 @@ title: "Base64 decoding bug that is present in all version of .NET"
 date: 2019-03-06
 published: true
 tags:
+    - c-sharp
     - dotnet
     - bug
     - base64
-    - amaizing
 ---
 
 One sunny morning I was sitting in front of my laptop refactoring some C# code. Everything was going very smooth and it was going to be a productive day. And then I added one too many equal signs to a constant string literal and things just blew up. Gone the productivity. Gone the peaceful refactoring Sunday. Even the sun decided to hide behind the cloud.
@@ -88,3 +88,5 @@ string Repad(string base64)
         : base64;
 }
 ```
+
+*Also published on [DEV](https://dev.to/detunized/base64-decoding-bug-that-is-present-in-all-version-of-net-1fkp)*
