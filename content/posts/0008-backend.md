@@ -102,5 +102,5 @@ Google searches that went into getting this to work:
 
 ---
 
-- Time spent: 3:50 minutes
+- Time spent: 3:50 hours
 - Total time spent: 11:00 hours

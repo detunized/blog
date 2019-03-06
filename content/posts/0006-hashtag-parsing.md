@@ -128,5 +128,5 @@ Google searches that went into getting this to work:
 
 ---
 
-- Time spent: 60 minutes
+- Time spent: 1 hour
 - Total time spent: 6:35 hours

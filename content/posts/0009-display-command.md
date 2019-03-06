@@ -123,5 +123,5 @@ Google searches that went into getting this to work:
 
 ---
 
-- Time spent: 5:15 minutes
+- Time spent: 5:15 hours
 - Total time spent: 16:15 hours
