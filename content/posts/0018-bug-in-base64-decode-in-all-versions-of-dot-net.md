@@ -89,4 +89,4 @@ string Repad(string base64)
 }
 ```
 
-*Also published on [DEV](https://dev.to/detunized/base64-decoding-bug-that-is-present-in-all-version-of-net-1fkp)*
+*Also published on [DEV](https://dev.to/detunized/base64-decoding-bug-that-is-present-in-all-version-of-net-1fkp) and [Medium](https://medium.com/@detunized/base64-decoding-bug-that-is-present-in-all-version-of-net-f53733cecdc1)*
