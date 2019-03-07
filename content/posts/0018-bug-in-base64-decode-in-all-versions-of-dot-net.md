@@ -51,7 +51,7 @@ Output:
 'abc==' -> [109]
 ```
 
-And what is *really* amazing, is that no one discovered this for so many years. Or it got discovered, but it didn't get fixed. Base64 is quite fundamental in the information exchange over the wire. It is used all over the place. Yet, .NET got away with a totally broken Base64 decoder for so many years.
+And what is *really* amazing, is that no one discovered this for so many years. Or it got discovered, but it didn't get fixed. Base64 is quite fundamental in the information exchange over the wire. It is used all over the place. Yet, .NET got away with a buggy Base64 decoder for so many years.
 
 At first I couldn't believe it and started to investigate it. I googled for a while and didn't really find much. Then I posted on [StackOverflow](https://stackoverflow.com/q/54852219/362938), but didn't get much luck there either. I had to even [answer](https://stackoverflow.com/a/54852796/362938) my own question once I figured out what's going on. After searching on GitHub for a while I stumbled upon a [fix](https://github.com/dotnet/corefx/pull/30814) in .NET Core made in July 2018. So the latest .NET Core version handles this correctly and throws an exception:
 
