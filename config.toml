@@ -47,6 +47,14 @@ pygmentsUseClasses = true
     name = "twitter"
     url = "https://twitter.com/detunized_net"
 
+  [[params.social]]
+    name = "dev"
+    url = "https://dev.to/detunized"
+
+  [[params.social]]
+    name = "medium"
+    url = "https://medium.com/@detunized"
+
 [menu]
   [[menu.main]]
     name = "Blog"
