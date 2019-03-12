@@ -1,11 +1,12 @@
 ---
 title: "NUnit to xUnit automatic test conversion"
-date: 2019-03-13
+date: 2019-03-12
 published: true
 tags:
     - c-sharp
     - refactoring
     - roslyn
+    - dotnet
 ---
 
 I'm currently working on a major refactoring of a C# library which has many NUnit tests. I decided, without having any good reason, it would be a good idea to migrate them to xUnit. I did a few by hand and it turns out to be tedious. Like really tedious. The most common pattern is the following:
