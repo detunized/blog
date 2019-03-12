@@ -318,3 +318,5 @@ To cover most common NUnit cases we'd have to write hundreds of those matching f
 ## Conclusion
 
 In only [175 lines of code](https://gist.github.com/detunized/8d548bb3b6808f7f076ed1a5f2c6ddd4) we have a fully functional converter that does in a second what takes a lot of time to do by hand. Even though it's just a proof of concept and doesn't cover any significant amount of NUnit assertions, I was able to convert a few files with tests with almost no additional fixing.
+
+*Also published on [DEV](https://dev.to/detunized/nunit-to-xunit-automatic-test-conversion-3hc6) and [Medium](https://medium.com/@detunized/nunit-to-xunit-automatic-test-conversion-6854588c8b03)*
