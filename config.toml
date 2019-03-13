@@ -1,6 +1,6 @@
 baseURL = "https://detunized.net/"
 languageCode = "en-us"
-title = "0xFEEDDEADBEEF"
+title = "0xDEADBEEF"
 theme = "hermit"
 
 pygmentsCodeFences = true
