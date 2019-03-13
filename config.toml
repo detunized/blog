@@ -2,6 +2,7 @@ baseURL = "https://detunized.net/"
 languageCode = "en-us"
 title = "0xDEADBEEF"
 theme = "hermit"
+googleAnalytics = "UA-136108717-1"
 
 pygmentsCodeFences = true
 pygmentsUseClasses = true
