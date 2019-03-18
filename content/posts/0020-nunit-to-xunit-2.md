@@ -2,7 +2,6 @@
 title: "NUnit to xUnit automatic test conversion: pattern match"
 date: 2019-03-16
 published: true
-draft: true
 tags:
     - c-sharp
     - refactoring
