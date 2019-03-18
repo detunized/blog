@@ -173,3 +173,5 @@ With a [few more lines of code added this already becomes a useful tool](https:/
 ## Conclusion
 
 Thanks to Roslyn awesome API with just [172 lines of code](https://gist.github.com/detunized/d02a0640986f44243dc01e5f50f42e74) we have a pretty advanced code grep. Surely, it's just a toy and a proof of concept at the moment. It would take a serious effort to make it something more than that. But I'm happy with what is possible with so little effort. Amazing.
+
+*Also published on [DEV](https://dev.to/detunized/nunit-to-xunit-automatic-test-conversion-pattern-match-5alb) and [Medium](https://medium.com/@detunized/nunit-to-xunit-automatic-test-conversion-pattern-match-9628360f74a5)*
