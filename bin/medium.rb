@@ -4,6 +4,7 @@ require "yaml"
 require "medium"
 require "ap"
 require "openssl"
+require "net/http"
 
 POSTS_DIR = "content/posts"
 CONFIG = YAML.load_file "external-services.yaml"
@@ -13,6 +14,14 @@ SERVICES = {
     "medium" => "Medium",
 }
 
+Post = Struct.new :name,
+                  :text,
+                  :sha,
+                  :front,
+                  :original_body,
+                  :body,
+                  :link
+
 def load_status
     YAML.load_file "status.yaml"
 end
@@ -21,26 +30,80 @@ def save_status status
     File.open("status.yaml", "w") { |io| io.write status.to_yaml }
 end
 
-Post = Struct.new :name, :text, :sha
+def permalink front_matter
+    date = front_matter["date"].strftime "%Y-%m-%d"
+    slug = front_matter["title"].downcase.gsub(/\s+/, "-").gsub(/[^a-z0-9_\-.~]/, "")
+
+    "https://detunized.net/posts/#{date}-#{slug}/"
+end
 
 def load_post filename
     name = File.basename(filename)
     text = File.read(filename)
+    body = text[/---.*?---\s*(.*)/m, 1]
+    front_matter = YAML.load text
 
     Post.new name,
              text,
-             Digest::SHA256.hexdigest(text)
+             Digest::SHA256.hexdigest(text),
+             YAML.load(text),
+             body,
+             body,
+             permalink(front_matter)
 end
 
-def post_to_dev post
+def format_footer post, template
+    template
+        .gsub("{{ link }}", post.link)
+        .gsub("{{ date }}", post.front["date"].strftime("%B %-d, %Y"))
+end
+
+def append_footer post, template
+    post.body + format_footer(post, template)
+end
+
+def url_exists? url
+    response = Net::HTTP.get_response URI url
+    response.code.to_i / 100 == 2
+end
+
+def publish_to_dev post
     puts "Posting to DEV"
     "https://dev.to/#{post.name}"
 end
 
-def post_to_medium post
+def publish_to_medium post
+    raise "The original URL '#{post.link}' doesn't exist" if !url_exists? post.link
+
+    puts "Posting #{post.name} to Medium..."
     medium = Medium::Client.new integration_token: CONFIG["medium"]["token"]
-    puts "Posting to Medium"
-    "https://medium.com/#{post.name}"
+    response = medium.posts.create medium.users.me,
+                                   title: post.front["title"],
+                                   content_format: "markdown",
+                                   content: append_footer(post, CONFIG["medium"]["footer"]),
+                                   publish_status: "draft",
+                                   tags: ["programming"] + post.front["tags"],
+                                   canonical_url: post.link
+
+    raise "Network request failed #{response}" if response.status_code / 100 != 2
+
+    response_json = JSON.load response.body
+    response_json["data"]["url"]
+end
+
+def update_on_dev post
+    raise "Update on DEV is not supported"
+end
+
+def update_on_medium post
+    raise "Update on Medium is not supported"
+end
+
+def link status, filename, service
+    url = status[File.basename filename][service]["url"]
+    fail "Don't have a link for #{filename} on #{service}" if url.nil?
+
+    url
 end
 
 status = load_status
@@ -89,11 +152,16 @@ exit if gets.chomp != "y"
 to_publish.each do |service, posts|
     posts.each do |post|
         begin
+            # Convert links to other posts
+            post.body = post.original_body.gsub(/{{<\s*ref "(.*)"\s*>}}/) { link status, $1, service }
+
             url = send "publish_to_#{service}", post
+            status[post.name] ||= {}
+            status[post.name][service] ||= {}
             status[post.name][service]["url"] = url
             status[post.name][service]["sha256"] = post.sha
-        rescue
-            puts "Failed to publish '#{post.name}' to #{SERVICES[service]}"
+        rescue e
+            puts "Failed to publish '#{post.name}' to #{SERVICES[service]} #{e}"
         end
     end
 end
