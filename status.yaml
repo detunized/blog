@@ -2,133 +2,140 @@
 0001-giving-go-another-chance.md:
   dev:
     sha256: 06d07ea112249f75d127c0952837d183730ce5d9ebe848f223fd2fcebe489614
-    url: ""
+    url: ''
   medium:
     sha256: 06d07ea112249f75d127c0952837d183730ce5d9ebe848f223fd2fcebe489614
-    url: ""
+    url: ''
 0002-setting-everything-up.md:
   dev:
     sha256: f679e583f13e560bec7895c65d9573c5a844b36fcc570c2058f9433f8ef08378
-    url: ""
+    url: ''
   medium:
     sha256: f679e583f13e560bec7895c65d9573c5a844b36fcc570c2058f9433f8ef08378
-    url: ""
+    url: ''
 0003-commad-line-arguments.md:
   dev:
     sha256: 7dae03a17d7a53382edcef3cd7de6c6a0d1024dcdbcf618a40162b6fec6697b4
-    url: ""
+    url: ''
   medium:
     sha256: 7dae03a17d7a53382edcef3cd7de6c6a0d1024dcdbcf618a40162b6fec6697b4
-    url: ""
+    url: ''
 0004-easy-parameter-parsing.md:
   dev:
     sha256: d8b933bf0a8731ffe907d312d9ab1a645118890971c82b2bff8be49c9564bcca
-    url: ""
+    url: ''
   medium:
     sha256: d8b933bf0a8731ffe907d312d9ab1a645118890971c82b2bff8be49c9564bcca
-    url: ""
+    url: ''
 0005-more-ambitious-parsing.md:
   dev:
     sha256: ed951a0df6042918718c43e3b56a2f015fc798c747149a9a2d906b7701d37297
-    url: ""
+    url: ''
   medium:
     sha256: ed951a0df6042918718c43e3b56a2f015fc798c747149a9a2d906b7701d37297
-    url: ""
+    url: ''
 0006-hashtag-parsing.md:
   dev:
     sha256: c14f5b24fe2f70aba2586b605014b6935d9090272e9bde080312589d4d4bb77b
-    url: ""
+    url: ''
   medium:
     sha256: c14f5b24fe2f70aba2586b605014b6935d9090272e9bde080312589d4d4bb77b
-    url: ""
+    url: ''
 0007-refactoring.md:
   dev:
     sha256: 7c2951c07392fe34cd992c8f79f426024666414dbf32d3890933d55657f642b1
-    url: ""
+    url: ''
   medium:
     sha256: 7c2951c07392fe34cd992c8f79f426024666414dbf32d3890933d55657f642b1
-    url: ""
+    url: ''
 '0008-backend.md':
   dev:
     sha256: a085cc7ee509f915817b9aad38d562c34f4d0a482ef00a29d209e8ed89f71c7f
-    url: ""
+    url: ''
   medium:
     sha256: a085cc7ee509f915817b9aad38d562c34f4d0a482ef00a29d209e8ed89f71c7f
-    url: ""
+    url: ''
 '0009-display-command.md':
   dev:
     sha256: 3c3e14fe12f350a1a0b4c950e3f822b8a7556e46a28a1e129f78170f1a8315c3
-    url: ""
+    url: ''
   medium:
     sha256: 3c3e14fe12f350a1a0b4c950e3f822b8a7556e46a28a1e129f78170f1a8315c3
-    url: ""
+    url: ''
 0010-blog-with-hugo.md:
   dev:
     sha256: adb5c4e702527ea1d65f6f40a1c81ea53361c326c749ad09429bbb2d75ae1754
-    url: ""
+    url: ''
   medium:
     sha256: adb5c4e702527ea1d65f6f40a1c81ea53361c326c749ad09429bbb2d75ae1754
-    url: ""
+    url: ''
 0011-error-handling.md:
   dev:
     sha256: 7c6b87638e2b69c419f92c4c2db7243e3b4fed2265ad15258cdba2ceecb16337
-    url: ""
+    url: ''
   medium:
     sha256: 7c6b87638e2b69c419f92c4c2db7243e3b4fed2265ad15258cdba2ceecb16337
-    url: ""
+    url: ''
 0012-git-fu-merge-multiple-repos-with-linear-history.md:
   dev:
     sha256: 808b92a7d886b32f5f844e54528444862943ea58d13b70daeb3284d6269533f5
-    url: ""
+    url: ''
   medium:
     sha256: 808b92a7d886b32f5f844e54528444862943ea58d13b70daeb3284d6269533f5
-    url: ""
+    url: ''
 0013-git-fu-reposurgeon.md:
   dev:
     sha256: c48e51ef9408c738a032ba5e7cffe048cf215ff4b19128429039fb8f2b783d0c
-    url: ""
+    url: ''
   medium:
     sha256: c48e51ef9408c738a032ba5e7cffe048cf215ff4b19128429039fb8f2b783d0c
-    url: ""
+    url: ''
 0014-dev--zen-mode-userscript.md:
   dev:
     sha256: d6ebdd7a2d161b3b667be87c0d1357b7b5e57fe6480cfcea2ad11462b515d4ac
-    url: ""
+    url: ''
   medium:
     sha256: d6ebdd7a2d161b3b667be87c0d1357b7b5e57fe6480cfcea2ad11462b515d4ac
-    url: ""
+    url: ''
 0015-performance-of-js-algorithms-1.md:
   dev:
     sha256: cd6ce9b2baab0d97eff8e1d60959441e1f50d091415444d4a23274786f9c720e
-    url: ""
+    url: ''
   medium:
     sha256: cd6ce9b2baab0d97eff8e1d60959441e1f50d091415444d4a23274786f9c720e
-    url: ""
+    url: ''
 0016-read-yamly-config-with-a-few-lines-of-code.md:
   dev:
     sha256: f402ce5b01e1ac4f49b3b48bb31cdd3d44aa3362c0d93587ca4eab11d8403493
-    url: ""
+    url: ''
   medium:
     sha256: f402ce5b01e1ac4f49b3b48bb31cdd3d44aa3362c0d93587ca4eab11d8403493
-    url: ""
+    url: ''
 0017-fzf-rsync.md:
   dev:
     sha256: 928b4978bb2ee068e9235f21de63361aa66cf3ad26b94e758c714363b7a63839
-    url: ""
+    url: ''
   medium:
     sha256: 928b4978bb2ee068e9235f21de63361aa66cf3ad26b94e758c714363b7a63839
-    url: ""
+    url: ''
 '0018-bug-in-base64-decode-in-all-versions-of-dot-net.md':
   dev:
     sha256: b426f52fbdd71fdaddcd2b64d624544c11177eb4709a3bd08e59477081a88afa
-    url: ""
+    url: ''
   medium:
     sha256: b426f52fbdd71fdaddcd2b64d624544c11177eb4709a3bd08e59477081a88afa
-    url: ""
+    url: ''
 '0019-nunit-to-xunit-1.md':
   dev:
     sha256: 679376a429f9614aadefe80ddb8783141d730fa20dbeb095455bca4c613d2b66
-    url: ""
+    url: ''
   medium:
     sha256: 679376a429f9614aadefe80ddb8783141d730fa20dbeb095455bca4c613d2b66
-    url: ""
+    url: ''
+0020-nunit-to-xunit-2.md:
+  dev:
+    url: https://dev.to/detunized/nunit-to-xunit-automatic-test-conversion-pattern-match-5alb
+    sha256: 459f37649bc090a4ed2666598c9f14ddeae1ceb2b038619e6a4e2afacc4ecb52
+  medium:
+    url: https://medium.com/@detunized/9628360f74a5
+    sha256: 459f37649bc090a4ed2666598c9f14ddeae1ceb2b038619e6a4e2afacc4ecb52
