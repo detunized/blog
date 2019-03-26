@@ -7,9 +7,10 @@ tags:
     - refactoring
     - roslyn
     - dotnet
+cover_image: https://images.unsplash.com/photo-1480515883589-dcaa74351fd6
 ---
 
-In the [previous post]({{< ref "/posts/0020-nunit-to-xunit-2.md" >}}) I wrote about how I find the patterns in the code that I would like to refactor using simple C# syntax. Basically, I write the exact expression I would like to find with some wildcards that match the varying parts and the rest is matched as is. A bit like a regexp or a shell file glob. Like this:
+In the [previous post]({{<ref "/posts/0020-nunit-to-xunit-2.md">}}) I wrote about how I find the patterns in the code that I would like to refactor using simple C# syntax. Basically, I write the exact expression I would like to find with some wildcards that match the varying parts and the rest is matched as is. A bit like a regexp or a shell file glob. Like this:
 
 ```c#
 Assert.That(_, Is.EqualTo(_))
@@ -128,3 +129,5 @@ The code could be found [here](https://github.com/detunized/nunit2xunit).
 ## Future work
 
 Not every AST node type is covered by the pattern matching code and not every possible `Assert` expression is covered by the patterns. That is something to expand on. Maybe this could also be turned into a Visual Studio [Code] extension. In general this doesn't have to be a unit test conversion tool. With this mini-DSL it's possible to refactor/convert any code really. It's also possible to search for the matches in the codebase. Lots of ideas and not so much time.
+
+*Also published on [DEV](https://dev.to/detunized/nunit-to-xunit-automatic-test-conversion-source-code-transformation-16pc) and [Medium](https://medium.com/@detunized/82e8529fd415)*

@@ -139,3 +139,10 @@
   medium:
     url: https://medium.com/@detunized/9628360f74a5
     sha256: 459f37649bc090a4ed2666598c9f14ddeae1ceb2b038619e6a4e2afacc4ecb52
+0021-nunit-to-xunit-3.md:
+  dev:
+    url: https://dev.to/detunized/nunit-to-xunit-automatic-test-conversion-source-code-transformation-16pc
+    sha256: 4d6da7519ad09e8d84238cf42deb1a63d079eaea45c0575c13fc3593c7deb832
+  medium:
+    url: https://medium.com/@detunized/82e8529fd415
+    sha256: 4d6da7519ad09e8d84238cf42deb1a63d079eaea45c0575c13fc3593c7deb832
