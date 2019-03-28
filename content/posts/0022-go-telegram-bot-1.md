@@ -2,8 +2,7 @@
 title: Telegram bot in Go
 date: 2019-03-28
 published: true
-series:
-    - Telegram bot in Go
+series: Telegram bot in Go
 tags:
     - go
     - telegram
@@ -87,3 +86,5 @@ func readConfig() Config {
 ```
 
 That should do it for day 1. If you're curious, the code is [available on GitHub](https://github.com/detunized/since-bot/tree/day-1). This version is tagged `day-1`.
+
+*Also published on [DEV](https://dev.to/detunized/telegram-bot-in-go-3hd4) and [Medium](https://medium.com/@detunized/telegram-bot-in-go-9956786f60d0)*
