@@ -2,7 +2,8 @@
 title: Telegram bot in Go
 date: 2019-03-28
 published: true
-series: Telegram bot in Go
+series:
+    - Telegram bot in Go
 tags:
     - go
     - telegram
