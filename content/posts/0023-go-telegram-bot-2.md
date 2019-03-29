@@ -18,7 +18,7 @@ I quickly shopped around for an SQLite package for Go and found [go-sqlite3](htt
 
 Since I'm writing everything in Go, I desperately need to use the goroutines somewhere. So the first thing I did was to move the reply functionality into a goroutine.
 
-```go
+```golang
 for update := range updates {
     go reply(bot, update)
 }
@@ -28,7 +28,7 @@ That should make things go **FAST**! Never mind the fact that Telegram will [not
 
 To use the database I have to open it first. It's done like this:
 
-```go
+```golang
 func openDatabase() *sql.DB {
     db, err := sql.Open("sqlite3", "./since.db")
     if err != nil {
@@ -53,7 +53,7 @@ I also create a table if it doesn't exist. Since I barely use SQL, I prefer to S
 
 Once the database successfully opened and no one panicked, it's time to start saving incoming events to it. I do it like this:
 
-```go
+```golang
 func store(message *tgbotapi.Message, db *sql.DB) {
     _, err := db.Exec("INSERT INTO events (user, name, date) VALUES ($1, $2, $3);",
         message.From.ID,
@@ -70,3 +70,5 @@ store(update.Message, db)
 Now, every time I send a message to my bot it stores its content in the database. It's a start. The bot is still responding with the same reply as before. It's still really dumb. We'll get to make it smarter in the next day.
 
 If you're curious, the code is [available on GitHub](https://github.com/detunized/since-bot/tree/day-2). This version is tagged `day-2`.
+
+*Also published on [DEV](https://dev.to/detunized/telegram-bot-in-go-database-25mn) and [Medium](https://medium.com/@detunized/telegram-bot-in-go-database-f8714381c858)*

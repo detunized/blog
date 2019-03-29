@@ -153,3 +153,10 @@
   medium:
     url: https://medium.com/@detunized/telegram-bot-in-go-9956786f60d0
     sha256: d24dc4fc44f4f36d9956a29d26dd5ba8b9c46876756c2514128ec8f08ec65f65
+0023-go-telegram-bot-2.md:
+  dev:
+    url: https://dev.to/detunized/telegram-bot-in-go-database-25mn
+    sha256: c5ef5e057e27c35b1929e2a30d20d469d1ef755f94efa7f4604e64e5e095db88
+  medium:
+    url: https://medium.com/@detunized/telegram-bot-in-go-database-f8714381c858
+    sha256: d4418aa5f6b0151f4b9fe9fb3c2a320578579f5c67093bd90002b4057940bd88
