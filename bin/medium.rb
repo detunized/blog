@@ -14,6 +14,11 @@ SERVICES = {
     "medium" => "Medium",
 }
 
+MEDIUM = {
+    "header" => "![cover]({{ cover-image }})",
+    "footer" => "\n---\n*Originally published at [detunized.net]({{ link }}) on {{ date }}*\n",
+}
+
 Post = Struct.new :name,
                   :text,
                   :sha,
@@ -62,6 +67,14 @@ def append_footer post, template
     post.body + format_footer(post, template)
 end
 
+def prepare_for_medium post
+    cover_image = post.front["cover_image"] || ""
+    header = MEDIUM["header"].gsub "{{ cover-image }}", cover_image
+    footer = format_footer post, MEDIUM["footer"]
+
+    header + post.body + footer
+end
+
 def url_exists? url
     response = Net::HTTP.get_response URI url
     response.code.to_i / 100 == 2
@@ -80,7 +93,7 @@ def publish_to_medium post
     response = medium.posts.create medium.users.me,
                                    title: post.front["title"],
                                    content_format: "markdown",
-                                   content: append_footer(post, CONFIG["medium"]["footer"]),
+                                   content: prepare_for_medium(post),
                                    publish_status: "draft",
                                    tags: ["programming"] + post.front["tags"],
                                    canonical_url: post.link
