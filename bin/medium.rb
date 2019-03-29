@@ -14,6 +14,10 @@ SERVICES = {
     "medium" => "Medium",
 }
 
+DEV = {
+    "footer" => "\n*Originally published on [detunized.net]({{ link }})*"
+}
+
 MEDIUM = {
     "header" => "![cover]({{ cover-image }})",
     "footer" => "\n---\n*Originally published at [detunized.net]({{ link }}) on {{ date }}*\n",
@@ -81,7 +85,30 @@ def url_exists? url
 end
 
 def publish_to_dev post
-    puts "Posting to DEV"
+    raise "The original URL '#{post.link}' doesn't exist" if !url_exists? post.link
+
+    puts "Posting #{post.name} to DEV..., not really, just saving it to dev.md"
+
+    # Duplicate the front matter
+    front = Marshal.load Marshal.dump post.front
+
+    # DEV doesn't like series as an array (SaaA?)
+    series = front["series"]
+    front["series"] = series[0] if Array === series and series.size > 0
+
+    # DEV also doesn't like date
+    front.delete "date"
+
+    footer = format_footer post, DEV["footer"]
+
+    File.open "dev.md", "wt" do |io|
+        io.puts front.to_yaml
+        io.puts "---"
+        io.puts
+        io.puts post.body
+        io.puts footer
+    end
+
     "https://dev.to/#{post.name}"
 end
 
@@ -149,7 +176,8 @@ to_publish.each do |service, posts|
     end
 end
 
-to_update.each do |service, posts|
+# Currently disabled
+false && to_update.each do |service, posts|
     if posts.size > 0
         have_work = true
         puts "Will update #{posts.size} post(s) on #{SERVICES[service]}"
@@ -179,7 +207,8 @@ to_publish.each do |service, posts|
     end
 end
 
-to_update.each do |service, posts|
+# Currently disabled
+false && to_update.each do |service, posts|
     posts.each do |post|
         begin
             url = send "update_on_#{service}", post
