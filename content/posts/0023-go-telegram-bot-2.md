@@ -16,7 +16,7 @@ Today I'm gonna add a database to my bot. As I mentioned in the [previous post](
 
 I quickly shopped around for an SQLite package for Go and found [go-sqlite3](https://github.com/mattn/go-sqlite3). This seems to be a very popular package. It allows me to use the standard `database/sql` package and it acts as a driver, which allows the Go database engine to talk to SQLite databases. So far so good. I'll use that then.
 
-Since I'm writing everything in Go, I desperately need to use the goroutines somewhere. So the first thing I did was to move the reply functionality into a goroutine.
+Since I'm writing everything in Go, I desperately need to use goroutines somewhere. So the first thing I did was to move the reply functionality into a goroutine.
 
 ```golang
 for update := range updates {
@@ -49,7 +49,7 @@ func openDatabase() *sql.DB {
 }
 ```
 
-I also create a table if it doesn't exist. Since I barely use SQL, I prefer to SCREAM, so people can hear me. And maybe the DB will get a [sense of urgency](https://stackoverflow.com/a/35684720/362938) and [process my queries faster](https://twitter.com/shipilev/status/703176579191410689).
+I also create a table if it doesn't exist. Since I barely use SQL, I prefer to SCREAM so people can hear me. And maybe the DB will get a [sense of urgency](https://stackoverflow.com/a/35684720/362938) and [process my queries faster](https://twitter.com/shipilev/status/703176579191410689).
 
 Once the database successfully opened and no one panicked, it's time to start saving incoming events to it. I do it like this:
 
