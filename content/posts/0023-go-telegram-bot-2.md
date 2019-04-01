@@ -35,17 +35,17 @@ func openDatabase() *sql.DB {
         log.Panic(err)
     }
 
-     _, err = db.Exec("CREATE TABLE IF NOT EXISTS events (" +
+    _, err = db.Exec("CREATE TABLE IF NOT EXISTS events (" +
         "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
         "user INTEGER, " +
         "name TEXT, " +
         "date INTEGER);")
 
-     if err != nil {
+    if err != nil {
         log.Panic(err)
     }
 
-     return db
+    return db
 }
 ```
 
