@@ -115,3 +115,5 @@ If I see that positional arguments become a problem, I'll switch to this way of 
 As much as I wanted to make my bot less dumb this time, I only managed to switch libraries while trying to bullet-proof my SQLite access methods. Just refactoring, no features. Here's a typical day of a software engineer for you. Well, the next day then.
 
 If you're curious, the code is [available on GitHub](https://github.com/detunized/since-bot/tree/day-3). This version is tagged `day-3`.
+
+*Also published on [DEV](https://dev.to/detunized/telegram-bot-in-go-concurrent-sqlite-343i) and [Medium](https://medium.com/@detunized/telegram-bot-in-go-concurrent-sqlite-e6176fac088e)*
