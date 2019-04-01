@@ -12,9 +12,9 @@ tags:
 cover_image: https://images.unsplash.com/photo-1527430253228-e93688616381
 ---
 
-[Last time]({{<ref "/posts/0023-go-telegram-bot-2.md">}}) I added SQLite to by bot and at the same time I moved the request processing into a goroutine. Which means I introduced concurrent database access to my codebase.
+[Last time]({{<ref "/posts/0023-go-telegram-bot-2.md">}}) I added SQLite to my bot and at the same time I moved the request processing into a goroutine. Which means I introduced concurrent database access to my codebase.
 
-Normally one should think, then do. Though not ideal, it's also possible to do it the other way around when you use `git`. But it's important to not forget to think altogether. Like I almost did and almost moved on to pile on more bugs on top of what I just introduced.
+Normally one should think, then do. Though not ideal, it's also possible to do it the other way around when you use `git`. But it's important not to forget to think at some point. Like I almost did and almost moved on to pile on more bugs on top of what I just introduced.
 
 I remembered reading or watching something about SQLite the other day and they made it clear that I'd have to make sure not to access the database from multiple places at the same time. Go is made for concurrency, so I'm sure [go-sqlite3](https://github.com/mattn/go-sqlite3) I was using has it under control. Not exactly, as it turned out.
 
@@ -24,9 +24,9 @@ From the [FAQ](https://github.com/mattn/go-sqlite3#faq):
 >
 > Yes for readonly. But, No for writable. See [#50](https://github.com/mattn/go-sqlite3/issues/50), [#51](https://github.com/mattn/go-sqlite3/issues/51), [#209](https://github.com/mattn/go-sqlite3/issues/209), [#274](https://github.com/mattn/go-sqlite3/issues/274).
 
-And I went down the major rabbit hole. I searched and researched, googled and binged (no, not really), read the source of `go-sqlite3` and the docs for SQLite (which are pretty good by the way). All of that just to find myself in a situation that I don't know if I can trust the `go-sqlite3` package to handle my database work. Even though the FAQ states that write concurrency is not supported, I found contradicting statements. People were saying it's fine if I use multiple connections. But I wasn't going to open a new connection every time.
+And just like that I went down the major rabbit hole. I searched and researched, googled and binged (no, not really), read the source of `go-sqlite3` and the docs for SQLite (which are pretty good by the way). All of that just to find myself in a situation that I don't know if I can trust the `go-sqlite3` package to handle my database work. Even though the FAQ states that write concurrency is not supported, I found contradicting statements. People were saying it's fine if I use multiple connections. But I wasn't going to open a new connection every time.
 
-Long story short, I found a [blog post](https://crawshaw.io/blog/go-and-sqlite) which addressed exactly the same problem and a solution for it (and a couple of others) in a form of a [Go package](https://github.com/crawshaw/sqlite).
+Long story short, I found a [blog post](https://crawshaw.io/blog/go-and-sqlite) which addressed exactly the same problem and offered a solution for it (and a couple of others) in a form of a [Go package](https://github.com/crawshaw/sqlite).
 
 ```shell
 go get -u crawshaw.io/sqlite
@@ -47,7 +47,7 @@ func openDB() *sqlitex.Pool {
 }
 ```
 
-Now, every time I want to access the database I have to get a connection from the pool and don't forget to put it back when I'm done. Getting a connection from the pool might block to wait for connections to become available.
+Now, every time I want to access the database I have to get a connection from the pool and not to forget to put it back when I'm done. Getting a connection from the pool might block until a connection becomes available.
 
 ```golang
 func execSQL(db *sqlitex.Pool, sql string) {
@@ -63,7 +63,7 @@ func execSQL(db *sqlitex.Pool, sql string) {
 
 A side note on the error handling. I currently do not handle errors on purpose to not slow myself down. But I don't ignore them either. Like any self-respecting software engineer I panic when I receive an error. For some errors, like not being able to open the database on startup, it's totally fine to panic. But if there was an error with one of the messages, panic is not such a good choice. It's like shutting down the server when we should have just returned HTTP/404.
 
-Now, storing the incoming message in the database changes to this:
+Now, storing the incoming message in the database becomes this:
 
 ```golang
 func store(message *tgbotapi.Message, db *sqlitex.Pool) {
@@ -84,7 +84,7 @@ func store(message *tgbotapi.Message, db *sqlitex.Pool) {
 }
 ```
 
-One small thing I don't like about this is that I'm forced to use positional SQL arguments if I want to use `sqlitex.Exec`. If wanted to use the column names like `"... VALUES ($user, $name, $date)"`, I'd have to use much wordier API. Prepare statement myself and then step through it. Like this:
+One small thing I don't like about this is that I'm forced to use positional SQL arguments if I want to use `sqlitex.Exec`. If I wanted to use the column names like `"... VALUES ($user, $name, $date)"`, I'd have to use a much wordier API. Prepare statement myself and then step through it. Like this:
 
 ```golang
 func store(message *tgbotapi.Message, db *sqlitex.Pool) {
