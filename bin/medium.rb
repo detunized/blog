@@ -99,6 +99,9 @@ def publish_to_dev post
     # DEV also doesn't like date
     front.delete "date"
 
+    # Link back to detinized.net
+    front["canonical_url"] = post.link
+
     footer = format_footer post, DEV["footer"]
 
     File.open "dev.md", "wt" do |io|
