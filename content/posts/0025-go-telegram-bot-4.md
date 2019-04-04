@@ -90,3 +90,5 @@ func formatResponse(name string, date int64, prevDate int64) string {
 Easy peasy. With not so many lines and in under an hour of work I have a bot that speaks human and can tell me when something happened the last time. Ship it! 🚢
 
 If you're curious, the code is [available on GitHub](https://github.com/detunized/since-bot/tree/day-4). This version is tagged `day-4`.
+
+*Also published on [DEV](https://dev.to/detunized/telegram-bot-in-go-speak-human-5bkd) and [Medium](https://medium.com/@detunized/telegram-bot-in-go-speak-human-b2b4547cad29)*

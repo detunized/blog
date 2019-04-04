@@ -162,8 +162,15 @@
     sha256: d4418aa5f6b0151f4b9fe9fb3c2a320578579f5c67093bd90002b4057940bd88
 0024-go-telegram-bot-3.md:
   dev:
-    url: https://dev.to/0024-go-telegram-bot-3.md
+    url: https://dev.to/detunized/telegram-bot-in-go-concurrent-sqlite-343i
     sha256: c75b726e843a4b464cc5b767846e348e3c8f1c9cf7313b1a269ebca29284114e
   medium:
     url: https://medium.com/@detunized/telegram-bot-in-go-concurrent-sqlite-e6176fac088e
     sha256: c75b726e843a4b464cc5b767846e348e3c8f1c9cf7313b1a269ebca29284114e
+0025-go-telegram-bot-4.md:
+  dev:
+    url: https://dev.to/detunized/telegram-bot-in-go-speak-human-5bkd
+    sha256: 1c7fee9b2b8aa9a2cd6094880c0336fd1f1905072ee5bc16a9ffd5666352edab
+  medium:
+    url: https://medium.com/@detunized/telegram-bot-in-go-speak-human-b2b4547cad29
+    sha256: 1c7fee9b2b8aa9a2cd6094880c0336fd1f1905072ee5bc16a9ffd5666352edab
