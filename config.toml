@@ -24,7 +24,7 @@ pygmentsUseClasses = true
   dateformNum     = "2006-01-02"
   dateformNumTime = "2006-01-02 15:04"
 
-  gitUrl = "https://github.com/detunized/blog"
+  gitUrl = "https://github.com/detunized/blog/commit/"
 
   imageHost = "https://raw.seedhost.eu/detunized/detunized.net"
 
