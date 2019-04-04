@@ -2,8 +2,6 @@
 title: "DEV zen mode: userscript"
 date: 2019-02-19
 published: true
-series:
-    - DEV zen reading mode
 tags:
     - devto
     - meta
