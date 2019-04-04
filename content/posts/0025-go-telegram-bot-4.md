@@ -1,5 +1,5 @@
 ---
-title: "Telegram bot in Go: keep track of events"
+title: "Telegram bot in Go: speak human"
 date: 2019-04-04
 published: true
 series:
