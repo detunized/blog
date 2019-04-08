@@ -9,7 +9,7 @@ tags:
     - telegram
     - bot
     - webdev
-cover_image: https://images.unsplash.com/photo-1527430253228-e93688616381
+cover_image: https://i.imgur.com/1X1g7mK.jpg
 ---
 
 [Last time]({{<ref "/posts/0024-go-telegram-bot-3.md">}}) I was bulletproofing my SQLite access foundation. Let's see if it holds in production. Too bad I'm never gonna get that high load that is supposed to break things. Oh well, let's wait and see. Maybe I get lucky and two sad concurrent requests would eventually make my Go binary panic.
