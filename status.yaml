@@ -174,3 +174,10 @@
   medium:
     url: https://medium.com/@detunized/telegram-bot-in-go-speak-human-b2b4547cad29
     sha256: 1c7fee9b2b8aa9a2cd6094880c0336fd1f1905072ee5bc16a9ffd5666352edab
+0026-go-telegram-bot-5.md:
+  dev:
+    url: https://dev.to/detunized/telegram-bot-in-go-speak-robot-1l9o
+    sha256: caac2b0e464f94dc47741b0e39b7681cfbedf619a1a52fa2d8d765226ab5626c
+  medium:
+    url: https://medium.com/@detunized/telegram-bot-in-go-speak-robot-16c54d655455
+    sha256: caac2b0e464f94dc47741b0e39b7681cfbedf619a1a52fa2d8d765226ab5626c

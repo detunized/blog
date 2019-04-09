@@ -127,3 +127,5 @@ The bot is getting smarter. Now it could respond in different ways to a few basi
 ![ideas](https://i.imgur.com/jR47I5p.png)
 
 If you're curious, the code is [available on GitHub](https://github.com/detunized/since-bot/tree/day-5). This version is tagged `day-5`.
+
+*Also published on [DEV](https://dev.to/detunized/telegram-bot-in-go-speak-robot-1l9o) and [Medium](https://medium.com/@detunized/telegram-bot-in-go-speak-robot-16c54d655455)*
