@@ -53,3 +53,5 @@ sudo killall PulseTray 'Pulse Secure' dsAccessService
 ```
 
 Dear developers and sysadmins, please don't do that again. You're just wasting everybody's time. Rather put your efforts into making the software more reliable, less resource hungry, more secure.
+
+*Also published on [DEV](https://dev.to/detunized/don-t-make-me-hack-your-software-2k8d) and [Medium](https://medium.com/@detunized/dont-make-me-hack-your-software-36116de3c4d2)*

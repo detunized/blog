@@ -181,3 +181,10 @@
   medium:
     url: https://medium.com/@detunized/telegram-bot-in-go-speak-robot-16c54d655455
     sha256: caac2b0e464f94dc47741b0e39b7681cfbedf619a1a52fa2d8d765226ab5626c
+0027-dont-make-me-hack-your-software.md:
+  dev:
+    url: https://dev.to/detunized/don-t-make-me-hack-your-software-2k8d
+    sha256: a91511c03c4a100b547efd99380a12e41089579ae73aa07e7fc30bd567e50e35
+  medium:
+    url: https://medium.com/@detunized/dont-make-me-hack-your-software-36116de3c4d2
+    sha256: a91511c03c4a100b547efd99380a12e41089579ae73aa07e7fc30bd567e50e35
