@@ -16,7 +16,7 @@ and I got this
 
 ![disallowed](https://i.imgur.com/f8rI72s.png)
 
-That pissed me off right then and there. Why would any remote admin tell me what to do on my local machine? Even if it's a company machine. When I do not use the VPN or maybe I'm not even connected to any WiFi, why should I have this running? It's just silly to try to prevent me doing something on the machine where I have the root access. When this gets pushed onto a developer's laptop (as opposed to an account or HR clerk) it simply becomes a challenge.
+That pissed me off right then and there. Why would any remote admin tell me what to do on my local machine? Even if it's a company machine. When I do not use the VPN or maybe I'm not even connected to any WiFi, why should I have this running? It's just silly to try to prevent me doing something on the machine where I have the root access. When this gets pushed onto a developer's laptop (as opposed to an accountant or an HR clerk) it simply becomes a challenge.
 
 It has no impact on the security of the machine or the corporate network when it's simply running in the background. This is not anti-virus software. It has an impact on the battery life and other resources like RAM and CPU though. And I need those. It's exactly this type of programs that don't exit, hang around and prevent me from running yet another Electron app on my laptop. Sometimes one is not enough, you know.
 
