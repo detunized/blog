@@ -117,3 +117,5 @@ Close enough for my needs. There's quite a bit of code to be covered in this pos
 The bot seems to have all the basic features. Sure, they are not very robust and not polished, but they kinda work. It's time to start using it. I need to figure out a way to deploy it somewhere and have it running. DevOps stuff. I wonder if I'm gonna need a Kubernetes cluster for that.
 
 If you're curious, the code is [available on GitHub](https://github.com/detunized/since-bot/tree/day-6). This version is tagged `day-6`.
+
+*Also published on [DEV](https://dev.to/detunized/telegram-bot-in-go-charts-5d6f) and [Medium](https://medium.com/@detunized/telegram-bot-in-go-charts-2226265b04cc)*

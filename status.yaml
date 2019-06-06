@@ -188,3 +188,10 @@
   medium:
     url: https://medium.com/@detunized/dont-make-me-hack-your-software-36116de3c4d2
     sha256: a91511c03c4a100b547efd99380a12e41089579ae73aa07e7fc30bd567e50e35
+0028-go-telegram-bot-6.md:
+  dev:
+    url: https://dev.to/detunized/telegram-bot-in-go-charts-5d6f
+    sha256: 4524ab37ff67b1db6dd38da9b5967ab32a783e5e699f303739ee008b13fa6eaa
+  medium:
+    url: https://medium.com/@detunized/telegram-bot-in-go-charts-2226265b04cc
+    sha256: 4524ab37ff67b1db6dd38da9b5967ab32a783e5e699f303739ee008b13fa6eaa
