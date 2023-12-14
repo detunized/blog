@@ -19,7 +19,7 @@ DEV = {
 }
 
 MEDIUM = {
-    "header" => "![cover]({{ cover-image }})",
+    "header" => "![cover]({{ cover-image }})\n\n",
     "footer" => "\n---\n*Originally published at [detunized.net]({{ link }}) on {{ date }}*\n",
 }
 
@@ -120,10 +120,16 @@ def publish_to_medium post
 
     puts "Posting #{post.name} to Medium..."
     medium = Medium::Client.new integration_token: CONFIG["medium"]["token"]
+
+    content = prepare_for_medium post
+    File.open "medium.md", "wt" do |io|
+        io.puts content
+    end
+
     response = medium.posts.create medium.users.me,
                                    title: post.front["title"],
                                    content_format: "markdown",
-                                   content: prepare_for_medium(post),
+                                   content: content,
                                    publish_status: "draft",
                                    tags: ["programming"] + post.front["tags"],
                                    canonical_url: post.link
