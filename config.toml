@@ -14,6 +14,7 @@ pygmentsUseClasses = true
 [permalinks]
   posts = "/posts/:year-:month-:day-:slug"
   photo = "/photo/:slug"
+  games = "/games/:slug"
 
 [params]
   author = "Dmitry Yakimenko"
@@ -68,6 +69,11 @@ pygmentsUseClasses = true
     weight = 20
 
   [[menu.main]]
+    name = "Games"
+    url = "/games/"
+    weight = 30
+
+  [[menu.main]]
     name = "About"
     url = "/about/"
-    weight = 30
+    weight = 40
