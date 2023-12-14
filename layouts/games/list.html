@@ -27,7 +27,7 @@
         {{ range (sort .Data.Pages "File.Path") }}
             <!-- <pre>{{ .Page | jsonify (dict "indent" "  ") }}</pre> -->
             {{ $image := .Resources.Get "icon.jpg" }}
-            <a href="{{ .Permalink }}"><img src="{{ $image.RelPermalink }}" /></a>
+            <a href="{{ .Permalink }}game.html"><img src="{{ $image.RelPermalink }}" /></a>
         {{ end }}
     </div>
 </body>
