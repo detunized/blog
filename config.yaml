@@ -14,7 +14,6 @@ taxonomies:
 permalinks:
   posts: "/posts/:year-:month-:day-:slug"
   photo: "/photo/:slug"
-  games: "/games/:slug"
 
 params:
   author: "Dmitry Yakimenko"
@@ -63,7 +62,8 @@ module:
   imports:
     - path: "github.com/detunized/lung-pong"
       mounts:
-        - source: "index.html"
-          target: "content/games/01-lung-pong/game.html"
-        - source: "game.js"
-          target: "content/games/01-lung-pong/game.js"
+        - source: "."
+          target: "static/games/lung-pong/"
+          includeFiles:
+            - "*.html"
+            - "*.js"
