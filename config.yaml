@@ -23,7 +23,7 @@ params:
   dateformNum: "2006-01-02"
   dateformNumTime: "2006-01-02 15:04"
   gitUrl: "https://github.com/detunized/blog/commit/"
-  imageHost: "https://raw.seedhost.eu/detunized/detunized.net"
+  imageHost: "https://dust.seedhost.eu/detunized/detunized.net"
 
   photo:
     paginate: 12
