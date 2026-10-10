@@ -104,7 +104,15 @@
 // index.html
 //
 #home-subtitle {
-  margin-bottom: 1.2em;
+  margin-bottom: .3em;
+}
+
+#home-tagline {
+  margin: 0 0 1.4em;
+  font-size: .55em;
+  line-height: normal;
+  text-align: center;
+  @include dimmed;
 }
 
 .hexdump {
@@ -142,10 +150,6 @@ a.hex-row:hover .hex-label {
 .hex-addr {
   color: lighten($theme, 12%);
   opacity: 1;
-}
-
-.hex-end {
-  pointer-events: none;
 }
 
 @media (max-width: 760px) {
