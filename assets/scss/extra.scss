@@ -100,3 +100,64 @@
     }
   }
 }
+
+// index.html
+//
+#home-subtitle {
+  margin-bottom: 1.2em;
+}
+
+.hexdump {
+  display: grid;
+  margin: 0 auto 1.4em;
+  font-family: $code-fonts;
+  font-size: .6em;
+  letter-spacing: normal;
+  line-height: 1.4;
+}
+
+.hex-row {
+  display: grid;
+  grid-template-columns: 8ch 14ch 7ch minmax(0, 1fr);
+  column-gap: 2ch;
+  padding: .35em .7em;
+  border-radius: 3px;
+  transition-property: background-color, color;
+
+  &:hover {
+    background-color: $dark-grey;
+  }
+}
+
+a.hex-row:hover .hex-label {
+  color: #fff;
+}
+
+.hex-addr,
+.hex-bytes,
+.hex-desc {
+  @include dimmed;
+}
+
+.hex-addr {
+  color: lighten($theme, 12%);
+  opacity: 1;
+}
+
+.hex-end {
+  pointer-events: none;
+}
+
+@media (max-width: 760px) {
+  .hex-row {
+    grid-template-columns: 8ch minmax(0, 1fr);
+  }
+
+  .hex-bytes {
+    display: none;
+  }
+
+  .hex-desc {
+    grid-column: 2;
+  }
+}

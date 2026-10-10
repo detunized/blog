@@ -1,0 +1,51 @@
+{{ define "main" }}
+	{{- $posts := where site.RegularPages "Section" "posts" }}
+	{{- $galleries := where site.RegularPages "Section" "photo" }}
+	{{- $latestPost := index $posts.ByDate.Reverse 0 }}
+	{{- $photoCount := 0 }}
+	{{- $firstYear := 9999 }}
+	{{- $lastYear := 0 }}
+	{{- range $galleries }}
+		{{- $photoCount = add $photoCount (len .Params.photos) }}
+		{{- $year := (time .Params.event_date).Year }}
+		{{- if lt $year $firstYear }}{{ $firstYear = $year }}{{ end }}
+		{{- if gt $year $lastYear }}{{ $lastYear = $year }}{{ end }}
+	{{- end }}
+	{{- $projectNames := slice }}
+	{{- range hugo.Data.projects }}{{ $projectNames = $projectNames | append .name }}{{ end }}
+	{{- $rows := slice
+		(dict "label" "blog" "url" ("posts/" | relURL) "desc" (printf "%d posts · latest: %s" (len $posts) $latestPost.Title))
+		(dict "label" "photo" "url" ("photo/" | relURL) "desc" (printf "%d galleries · %d photos · %d–%d" (len $galleries) $photoCount $firstYear $lastYear))
+		(dict "label" "code" "url" "https://github.com/detunized" "desc" (delimit $projectNames " · "))
+		(dict "label" "games" "url" ("games/" | relURL) "desc" "Lung Pong")
+		(dict "label" "about" "url" ("about/" | relURL) "desc" "under construction")
+	}}
+	<div id="spotlight" class="animated fadeIn">
+		<div id="home-center">
+			<h1 id="home-title">{{ site.Title }}</h1>
+			<p id="home-subtitle">{{ site.Params.author }}</p>
+			<nav class="hexdump" aria-label="Sections">
+				{{- range $i, $row := $rows }}
+				<a class="hex-row" href="{{ $row.url }}">
+					<span class="hex-addr">{{ printf "%08x" (mul $i 16) }}</span>
+					<span class="hex-bytes" aria-hidden="true">{{ printf "% x" $row.label }}</span>
+					<span class="hex-label">|{{ $row.label }}|</span>
+					<span class="hex-desc">{{ $row.desc }}</span>
+				</a>
+				{{- end }}
+				<span class="hex-row hex-end" aria-hidden="true"><span class="hex-addr">{{ printf "%08x" (mul (len $rows) 16) }}</span></span>
+			</nav>
+			{{- with site.Params.social }}
+			<div id="home-social">
+				{{ partialCached "social-icons.html" . }}
+			</div>
+			{{- end }}
+		</div>
+		<div id="home-footer">
+			<p>
+				&copy; {{ now.Format "2006" }} <a href="{{ site.BaseURL }}">{{ site.Params.author }}</a>
+				&#183; <a href="{{ "posts/index.xml" | absURL }}" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+			</p>
+		</div>
+	</div>
+{{ end }}
