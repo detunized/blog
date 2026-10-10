@@ -16,7 +16,7 @@ permalinks:
 
 params:
   author: "Dmitry Yakimenko"
-  tagline: "Software engineer, reverse engineer, occasional photographer"
+  tagline: "Software engineer, reverse engineer"
   email: "detunized@gmail.com"
   dateform: "Jan 2, 2006"
   dateformShort: "Jan 2"
