@@ -101,6 +101,7 @@ def publish_to_dev post
 
     # Link back to detinized.net
     front["canonical_url"] = post.link
+    front["published"] = true
 
     footer = format_footer post, DEV["footer"]
 

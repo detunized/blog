@@ -1,7 +1,6 @@
 ---
 title: "Git-Fu: merge multiple repos with linear history"
 date: 2019-02-15
-published: true
 tags:
     - git
     - madness

@@ -1,7 +1,6 @@
 ---
 title: "Telegram bot in Go: database"
 date: 2019-03-29
-published: true
 series:
     - Telegram bot in Go
 tags:

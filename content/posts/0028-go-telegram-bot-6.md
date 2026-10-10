@@ -1,7 +1,6 @@
 ---
 title: "Telegram bot in Go: charts"
 date: 2019-06-06
-published: true
 series:
     - Telegram bot in Go
 tags:

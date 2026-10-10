@@ -1,7 +1,6 @@
 ---
 title: "Telegram bot in Go: speak human"
 date: 2019-04-04
-published: true
 series:
     - Telegram bot in Go
 tags:

@@ -1,7 +1,6 @@
 ---
 title: "Telegram bot in Go: speak robot"
 date: 2019-04-09
-published: true
 series:
     - Telegram bot in Go
 tags:

@@ -1,7 +1,6 @@
 ---
 title: "Telegram bot in Go: concurrent SQLite"
 date: 2019-04-01
-published: true
 series:
     - Telegram bot in Go
 tags:

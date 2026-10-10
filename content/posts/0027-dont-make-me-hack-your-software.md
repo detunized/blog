@@ -1,7 +1,6 @@
 ---
 title: Don't make me hack your software
 date: 2019-04-17
-published: true
 tags:
     - hacks
     - osx

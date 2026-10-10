@@ -1,7 +1,6 @@
 ---
 title: "Fuzzy search and download files with rsync in the terminal"
 date: 2019-03-01
-published: true
 tags:
     - bash
     - terminal

@@ -2,7 +2,6 @@
 title: "Giving Go another chance: hashtag parsing"
 description: I'm writing a simple time tracking tool and rediscovering Go at the same time.
 date: 2019-01-25
-published: true
 series:
     - Making a time tracking tool in Go
 tags:

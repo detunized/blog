@@ -1,7 +1,6 @@
 ---
 title: "NUnit to xUnit automatic test conversion: source code transformation"
 date: 2019-03-26
-published: true
 tags:
     - c-sharp
     - refactoring

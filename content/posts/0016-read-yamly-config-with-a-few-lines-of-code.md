@@ -1,7 +1,6 @@
 ---
 title: "Read YAMLy config with a few lines of code"
 date: 2019-02-25
-published: true
 tags:
     - c-sharp
     - javascript

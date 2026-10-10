@@ -1,7 +1,6 @@
 ---
 title: "Git-Fu: reposurgeon"
 date: 2019-02-17
-published: true
 tags:
     - git
     - madness

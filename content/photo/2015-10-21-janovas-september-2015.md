@@ -1,7 +1,6 @@
 ---
 title: Janovas, September 2015
 date: 2015-10-21
-date: 2015-10-21
 event_date: '2015-09-15'
 folder: 2015-09-15-janovas
 images:

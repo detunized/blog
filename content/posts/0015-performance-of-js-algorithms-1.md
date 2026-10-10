@@ -1,7 +1,6 @@
 ---
 title: "Performance measurement of JavaScript solutions to common algorithmic questions (part 1)"
 date: 2019-02-21
-published: true
 tags:
     - javascript
     - performance

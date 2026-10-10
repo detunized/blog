@@ -1,7 +1,6 @@
 ---
 title: "Base64 decoding bug that is present in all version of .NET"
 date: 2019-03-06
-published: true
 tags:
     - c-sharp
     - dotnet

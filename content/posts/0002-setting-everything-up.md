@@ -2,7 +2,6 @@
 title: "Giving Go another chance: setting everything up"
 description: I'm writing a simple time tracking tool and rediscovering Go at the same time.
 date: 2019-01-20
-published: true
 series:
     - Making a time tracking tool in Go
 tags:

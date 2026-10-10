@@ -1,8 +1,7 @@
 baseURL: "https://detunized.net/"
-languageCode: "en-us"
+locale: "en-us"
 title: "0xDEADBEEF"
 theme: "hermit"
-googleAnalytics: "G-SHWZN6VT5J"
 
 pygmentsCodeFences: true
 pygmentsUseClasses: true
@@ -64,6 +63,10 @@ module:
       mounts:
         - source: "."
           target: "static/games/lung-pong/"
-          includeFiles:
+          files:
             - "*.html"
             - "*.js"
+
+services:
+  googleAnalytics:
+    id: "G-SHWZN6VT5J"
