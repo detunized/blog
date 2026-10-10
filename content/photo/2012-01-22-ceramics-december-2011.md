@@ -3,7 +3,7 @@ title: Ceramics, December 2011
 date: 2012-01-22
 event_date: "2011-12-01"
 folder: 2011-12-01-ceramics
-images:
+photos:
 - 001-ceramics.jpg
 - 002-ceramics.jpg
 - 003-ceramics.jpg

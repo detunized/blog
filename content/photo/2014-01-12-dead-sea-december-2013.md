@@ -3,7 +3,7 @@ title: Dead Sea, December 2013
 date: 2014-01-12
 event_date: '2013-12-30'
 folder: 2013-12-30-dead-sea
-images:
+photos:
 - 001-dead-sea.jpg
 - 002-dead-sea.jpg
 - 003-dead-sea.jpg

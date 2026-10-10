@@ -3,7 +3,7 @@ title: Stockholm, August 2010
 date: 2010-10-09
 event_date: "2010-08-01"
 folder: 2010-08-01-stockholm
-images:
+photos:
 - 001-stockholm.jpg
 - 002-stockholm.jpg
 - 003-stockholm.jpg

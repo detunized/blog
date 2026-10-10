@@ -3,7 +3,7 @@ title: Valparaiso, January 2010
 date: 2010-04-27
 event_date: "2010-01-01"
 folder: 2010-01-01-valparaiso
-images:
+photos:
 - 001-valparaiso.jpg
 - 002-valparaiso.jpg
 - 003-valparaiso.jpg

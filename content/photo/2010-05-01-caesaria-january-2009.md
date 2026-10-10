@@ -3,7 +3,7 @@ title: Caesaria, January 2009
 date: 2010-05-01
 event_date: "2009-01-01"
 folder: 2009-01-01-caesaria
-images:
+photos:
 - 001-caesaria.jpg
 - 002-caesaria.jpg
 - 003-caesaria.jpg

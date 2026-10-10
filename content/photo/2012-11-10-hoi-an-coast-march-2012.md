@@ -3,7 +3,7 @@ title: Hoi An Coast, March 2012
 date: 2012-11-10
 event_date: "2012-03-13"
 folder: 2012-03-13-hoi-an-coast
-images:
+photos:
 - 001-hoi-an-coast.jpg
 - 002-hoi-an-coast.jpg
 - 003-hoi-an-coast.jpg

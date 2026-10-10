@@ -3,7 +3,7 @@ title: Mauerpark, June 2015
 date: 2015-07-09
 event_date: '2015-06-07'
 folder: 2015-06-07-mauerpark
-images:
+photos:
 - 001-mauerpark.jpg
 - 002-mauerpark.jpg
 - 003-mauerpark.jpg

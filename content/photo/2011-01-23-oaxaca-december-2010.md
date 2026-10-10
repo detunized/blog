@@ -3,7 +3,7 @@ title: Oaxaca, December 2010
 date: 2011-01-23
 event_date: "2010-12-01"
 folder: 2010-12-01-oaxaca
-images:
+photos:
 - 001-oaxaca.jpg
 - 002-oaxaca.jpg
 - 003-oaxaca.jpg

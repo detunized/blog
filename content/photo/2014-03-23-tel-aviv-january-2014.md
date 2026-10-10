@@ -3,7 +3,7 @@ title: Tel Aviv, January 2014
 date: 2014-03-23
 event_date: '2014-01-03'
 folder: 2014-01-03-tel-aviv
-images:
+photos:
 - 001-tel-aviv.jpg
 - 002-tel-aviv.jpg
 - 003-tel-aviv.jpg

@@ -3,7 +3,7 @@ title: Ha Long Bay, March 2012
 date: 2012-04-30
 event_date: "2012-03-01"
 folder: 2012-03-01-ha-long-bay
-images:
+photos:
 - 001-ha-long-bay.jpg
 - 002-ha-long-bay.jpg
 - 003-ha-long-bay.jpg

@@ -3,7 +3,7 @@ title: California, March 2009
 date: 2009-10-22
 event_date: "2009-03-01"
 folder: 2009-03-01-california
-images:
+photos:
 - 001-california.jpg
 - 002-california.jpg
 - 003-california.jpg

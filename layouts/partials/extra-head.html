@@ -1,0 +1,2 @@
+{{ $style := resources.Get "scss/extra.scss" | css.Sass | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" {{ printf "integrity=%q" $style.Data.Integrity | safeHTMLAttr }}>

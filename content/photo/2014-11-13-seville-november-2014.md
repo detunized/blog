@@ -3,7 +3,7 @@ title: Seville, November 2014
 date: 2014-11-13
 event_date: '2014-11-04'
 folder: 2014-11-04-seville
-images:
+photos:
 - 001-seville.jpg
 - 002-seville.jpg
 - 003-seville.jpg

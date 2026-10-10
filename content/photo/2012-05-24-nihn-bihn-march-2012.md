@@ -3,7 +3,7 @@ title: Nihn Bihn, March 2012
 date: 2012-05-24
 event_date: "2012-03-01"
 folder: 2012-03-01-nihn-bihn
-images:
+photos:
 - 001-nihn-bihn.jpg
 - 002-nihn-bihn.jpg
 - 003-nihn-bihn.jpg

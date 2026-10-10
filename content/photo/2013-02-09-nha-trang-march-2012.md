@@ -3,7 +3,7 @@ title: Nha Trang, March 2012
 date: 2013-02-09
 event_date: '2012-03-17'
 folder: 2012-03-17-nha-trang
-images:
+photos:
 - 001-nha-trang.jpg
 - 002-nha-trang.jpg
 - 003-nha-trang.jpg

@@ -3,7 +3,7 @@ title: Humberstone, February 2010
 date: 2011-04-23
 event_date: "2010-02-01"
 folder: 2010-02-01-humberstone
-images:
+photos:
 - 001-humberstone.jpg
 - 002-humberstone.jpg
 - 003-humberstone.jpg

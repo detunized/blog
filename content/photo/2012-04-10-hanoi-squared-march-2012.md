@@ -3,7 +3,7 @@ title: Hanoi Squared, March 2012
 date: 2012-04-10
 event_date: "2012-03-01"
 folder: 2012-03-01-hanoi-squared
-images:
+photos:
 - 001-hanoi-squared.jpg
 - 002-hanoi-squared.jpg
 - 003-hanoi-squared.jpg

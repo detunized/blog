@@ -3,7 +3,7 @@ title: Istanbul, April 2009
 date: 2009-10-22
 event_date: "2009-04-01"
 folder: 2009-04-01-istanbul
-images:
+photos:
 - 001-istanbul.jpg
 - 002-istanbul.jpg
 - 003-istanbul.jpg

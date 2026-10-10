@@ -3,7 +3,7 @@ title: Baltic Sea, April 2009
 date: 2009-10-22
 event_date: "2009-04-01"
 folder: 2009-04-01-baltic-sea
-images:
+photos:
 - 001-baltic-sea.jpg
 - 002-baltic-sea.jpg
 - 003-baltic-sea.jpg

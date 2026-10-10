@@ -3,7 +3,7 @@ title: Isla Del Sol, February 2010
 date: 2011-04-28
 event_date: "2010-02-01"
 folder: 2010-02-01-isla-del-sol
-images:
+photos:
 - 001-isla-del-sol.jpg
 - 002-isla-del-sol.jpg
 - 003-isla-del-sol.jpg

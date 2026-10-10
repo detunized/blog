@@ -7,3 +7,8 @@ HUGO_VERSION = "0.167.0"
 HUGO_ENVIRONMENT = "production"
 HUGO_ENABLEGITINFO = "true"
 GO_VERSION = "1.27.1"
+
+[[redirects]]
+from = "/photo/page/*"
+to = "/photo/"
+status = 301

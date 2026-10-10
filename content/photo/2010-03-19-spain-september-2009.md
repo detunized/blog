@@ -3,7 +3,7 @@ title: Spain, September 2009
 date: 2010-03-19
 event_date: "2009-09-01"
 folder: 2009-09-01-spain
-images:
+photos:
 - 001-spain.jpg
 - 002-spain.jpg
 - 003-spain.jpg

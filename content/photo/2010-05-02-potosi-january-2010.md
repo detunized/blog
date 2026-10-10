@@ -3,7 +3,7 @@ title: Potosi, January 2010
 date: 2010-05-02
 event_date: "2010-01-01"
 folder: 2010-01-01-potosi
-images:
+photos:
 - 001-potosi.jpg
 - 002-potosi.jpg
 - 003-potosi.jpg

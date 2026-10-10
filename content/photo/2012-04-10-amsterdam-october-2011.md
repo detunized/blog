@@ -3,7 +3,7 @@ title: Amsterdam, October 2011
 date: 2012-04-10
 event_date: "2011-10-01"
 folder: 2011-10-01-amsterdam
-images:
+photos:
 - 001-amsterdam.jpg
 - 002-amsterdam.jpg
 - 003-amsterdam.jpg

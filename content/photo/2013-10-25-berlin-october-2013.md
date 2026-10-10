@@ -3,7 +3,7 @@ title: Berlin, October 2013
 date: 2013-10-25
 event_date: '2013-10-14'
 folder: 2013-10-14-berlin
-images:
+photos:
 - 001-berlin.jpg
 - 002-berlin.jpg
 - 003-berlin.jpg

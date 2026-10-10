@@ -1,38 +1,43 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>{{ .Title }}</title>
-    {{ $style := resources.Get "scss/photo.scss" | resources.ExecuteAsTemplate "css/photo.css" . | toCSS | minify | fingerprint -}}
-    <link href="{{ $style.Permalink }}" rel="stylesheet" type="text/css" />
-</head>
-<body>
-    <div id="page">
-        <div id="content">
-            <div id="header">
-                {{ .Title }}
-                <a id="icon" class="icon" href="{{ .Site.Params.photo.URL | absURL }}">S</a>
-            </div>
-            {{ $imageHost := .Site.Params.imageHost }}
-            {{ $folder := .Params.folder }}
-            {{ range $image := .Params.images }}
-                <img class="photo" src="{{ $imageHost }}/galleries/{{ $folder }}/{{ $image }}" alt="{{ $image }}">
-            {{ end }}
-            <div id="navigation">
-                {{- with .PrevInSection }}
-                    <div id="older">
-                        <a href="{{ .Permalink }}">&larr; Previous</a>
-                    </div>
-                {{ end }}
-                {{ with .NextInSection }}
-                    <div id="newer">
-                        <a href="{{ .Permalink }}">Next &rarr;</a>
-                    </div>
-                {{ end }}
-            </div>
-            {{ partial "photo/copyright.html" . }}
-        </div>
-    </div>
-    {{ partial "photo/analytics.html" . }}
-</body>
-</html>
+{{ define "header" }}
+{{ partial "header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+	{{- $imageHost := site.Params.imageHost }}
+	{{- $folder := .Params.folder }}
+	{{- $sizes := index hugo.Data.photos $folder }}
+	{{- $count := len .Params.photos }}
+	<main class="site-main section-inner animated fadeIn faster">
+		<article class="gallery">
+			<header class="post-header">
+				<div class="post-meta"><span>{{ $count }} photos</span></div>
+				<h1>{{ .Title }}</h1>
+			</header>
+			<div class="gallery-photos">
+				{{- range $i, $image := .Params.photos }}
+				{{- $size := index $sizes $image }}
+				<img src="{{ $imageHost }}/galleries/{{ $folder }}/{{ $image }}"
+					{{- with $size }} width="{{ index . 0 }}" height="{{ index . 1 }}"{{ end }}
+					alt="{{ $.Title }}, photo {{ add $i 1 }} of {{ $count }}"
+					loading="{{ if lt $i 2 }}eager{{ else }}lazy{{ end }}" decoding="async">
+				{{- end }}
+			</div>
+		</article>
+		<div class="post-nav gallery-nav">
+			{{- with .NextInSection }}
+			<a class="next-post" href="{{ .RelPermalink }}">
+				<span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>&nbsp;{{ i18n "newer" }}</span><br><span>{{ .Title }}</span>
+			</a>
+			{{- end }}
+			{{- with .PrevInSection }}
+			<a class="prev-post" href="{{ .RelPermalink }}">
+				<span class="post-nav-label">{{ i18n "older" }}&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span><br><span>{{ .Title }}</span>
+			</a>
+			{{- end }}
+		</div>
+	</main>
+{{ end }}
+
+{{ define "footer" }}
+{{ partialCached "footer.html" . }}
+{{ end }}

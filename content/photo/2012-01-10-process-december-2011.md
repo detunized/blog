@@ -3,7 +3,7 @@ title: Process, December 2011
 date: 2012-01-10
 event_date: "2011-12-01"
 folder: 2011-12-01-process
-images:
+photos:
 - 001-process.jpg
 - 002-process.jpg
 - 003-process.jpg

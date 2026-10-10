@@ -3,7 +3,7 @@ title: Spain, December 2011
 date: 2012-01-12
 event_date: "2011-12-01"
 folder: 2011-12-01-spain
-images:
+photos:
 - 001-spain.jpg
 - 002-spain.jpg
 - 003-spain.jpg

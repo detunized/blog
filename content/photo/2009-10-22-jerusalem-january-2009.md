@@ -3,7 +3,7 @@ title: Jerusalem, January 2009
 date: 2009-10-22
 event_date: "2009-01-01"
 folder: 2009-01-01-jerusalem
-images:
+photos:
 - 001-jerusalem.jpg
 - 002-jerusalem.jpg
 - 003-jerusalem.jpg

@@ -3,7 +3,7 @@ title: Harrachov, January 2012
 date: 2012-02-09
 event_date: "2012-01-01"
 folder: 2012-01-01-harrachov
-images:
+photos:
 - 001-harrachov.jpg
 - 002-harrachov.jpg
 - 003-harrachov.jpg
