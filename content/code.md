@@ -30,8 +30,8 @@ A single page TOTP code viewer. Import an authenticator export and see live code
 
 JavaScript · [Open it](https://1otp.netlify.app/) · [GitHub](https://github.com/detunized/otp-web)
 
-## Pentomino calendar solver
+## Okta TOTP
 
-Finds every way to cover a pentomino calendar puzzle board for any date, using backtracking search in a Web Worker.
+Registers itself as an Okta Verify device from the enrollment QR code and gives you the TOTP secret, so Okta codes can live in 1Password or any other authenticator app. It's a tiny Cloudflare Worker based on reverse engineering the Okta Verify Android app.
 
-JavaScript · [Try it](https://tubular-kringle-bb7f7b.netlify.app/) · [GitHub](https://github.com/detunized/pentomino-cal-solver)
+JavaScript · [Open it](https://okta-totp.detunized.workers.dev/) · [GitHub](https://github.com/detunized/okta-totp)
