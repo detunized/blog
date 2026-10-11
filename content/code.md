@@ -18,11 +18,11 @@ Before Password Manager Access each service had its own library. The LastPass on
 
 LastPass in [Ruby](https://github.com/detunized/lastpass-ruby), [C#](https://github.com/detunized/lastpass-sharp) and [C++](https://github.com/detunized/lastpass-cpp) · [1Password](https://github.com/detunized/1password-ruby), [Bitwarden](https://github.com/detunized/bitwarden-ruby) and [Dashlane](https://github.com/detunized/dashlane-ruby) in Ruby
 
-## nunit2xunit
+## Okta TOTP
 
-A proof of concept that converts NUnit tests to xUnit by rewriting the C# syntax tree. I wrote about it in [three](/posts/2019-03-12-nunit-to-xunit-automatic-test-conversion/) [blog](/posts/2019-03-16-nunit-to-xunit-automatic-test-conversion-pattern-match/) [posts](/posts/2019-03-26-nunit-to-xunit-automatic-test-conversion-source-code-transformation/).
+Registers itself as an Okta Verify device from the enrollment QR code and gives you the TOTP secret, so Okta codes can live in 1Password or any other authenticator app. It's a tiny Cloudflare Worker based on reverse engineering the Okta Verify Android app.
 
-C# · [GitHub](https://github.com/detunized/nunit2xunit)
+JavaScript · [Open it](https://okta-totp.detunized.workers.dev/) · [GitHub](https://github.com/detunized/okta-totp)
 
 ## OTP Web
 
@@ -30,8 +30,8 @@ A single page TOTP code viewer. Import an authenticator export and see live code
 
 JavaScript · [Open it](https://1otp.netlify.app/) · [GitHub](https://github.com/detunized/otp-web)
 
-## Okta TOTP
+## nunit2xunit
 
-Registers itself as an Okta Verify device from the enrollment QR code and gives you the TOTP secret, so Okta codes can live in 1Password or any other authenticator app. It's a tiny Cloudflare Worker based on reverse engineering the Okta Verify Android app.
+A proof of concept that converts NUnit tests to xUnit by rewriting the C# syntax tree. I wrote about it in [three](/posts/2019-03-12-nunit-to-xunit-automatic-test-conversion/) [blog](/posts/2019-03-16-nunit-to-xunit-automatic-test-conversion-pattern-match/) [posts](/posts/2019-03-26-nunit-to-xunit-automatic-test-conversion-source-code-transformation/).
 
-JavaScript · [Open it](https://okta-totp.detunized.workers.dev/) · [GitHub](https://github.com/detunized/okta-totp)
+C# · [GitHub](https://github.com/detunized/nunit2xunit)
