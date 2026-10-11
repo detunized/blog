@@ -1,6 +1,19 @@
 @import "predefined";
 
 $soft-blue: #8fb3e0;
+$bar-grey: #424652;
+
+// header.html
+//
+#site-header,
+#mobile-menu {
+  background-color: $bar-grey;
+}
+
+.site-nav a.active,
+#mobile-menu a.active {
+  color: $soft-blue;
+}
 
 // photo/list.html
 //
