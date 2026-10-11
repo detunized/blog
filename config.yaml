@@ -52,6 +52,9 @@ menu:
     - name: "Photo"
       url: "/photo/"
       weight: 20
+    - name: "Code"
+      url: "/code/"
+      weight: 25
     - name: "Games"
       url: "/games/"
       weight: 30

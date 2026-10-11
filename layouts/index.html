@@ -16,7 +16,7 @@
 	{{- $rows := slice
 		(dict "label" "blog" "url" ("posts/" | relURL) "desc" (printf "%d posts · latest: %s" (len $posts) $latestPost.Title))
 		(dict "label" "photo" "url" ("photo/" | relURL) "desc" (printf "%d galleries · %d photos · %d–%d" (len $galleries) $photoCount $firstYear $lastYear))
-		(dict "label" "code" "url" "https://github.com/detunized" "desc" (delimit $projectNames " · "))
+		(dict "label" "code" "url" ("code/" | relURL) "desc" (delimit $projectNames " · "))
 		(dict "label" "games" "url" ("games/" | relURL) "desc" "Lung Pong")
 		(dict "label" "about" "url" ("about/" | relURL) "desc" "who I am and how to reach me")
 	}}
