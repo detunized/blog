@@ -290,6 +290,24 @@
     "015-los-angeles-details.jpg": [1800, 1200],
     "title.jpg": [1500, 300]
   },
+  "2007-04-22-santa-barbara": {
+    "001-santa-barbara.jpg": [750, 500],
+    "002-santa-barbara.jpg": [750, 500],
+    "003-santa-barbara.jpg": [500, 750],
+    "004-santa-barbara.jpg": [500, 750],
+    "005-santa-barbara.jpg": [500, 750],
+    "006-santa-barbara.jpg": [500, 750],
+    "007-santa-barbara.jpg": [500, 750],
+    "008-santa-barbara.jpg": [500, 750],
+    "009-santa-barbara.jpg": [750, 500],
+    "010-santa-barbara.jpg": [500, 750],
+    "011-santa-barbara.jpg": [500, 750],
+    "012-santa-barbara.jpg": [750, 500],
+    "013-santa-barbara.jpg": [500, 750],
+    "014-santa-barbara.jpg": [500, 750],
+    "015-santa-barbara.jpg": [500, 750],
+    "title.jpg": [1500, 300]
+  },
   "2009-01-01-caesaria": {
     "001-caesaria.jpg": [600, 900],
     "002-caesaria.jpg": [900, 600],
