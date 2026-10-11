@@ -37,6 +37,9 @@
 				</a>
 				{{- end }}
 			</nav>
+			{{- with site.Params.availability }}
+			<p id="home-availability">{{ . }} &#183; <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></p>
+			{{- end }}
 			{{- with site.Params.social }}
 			<div id="home-social">
 				{{ partialCached "social-icons.html" . }}
