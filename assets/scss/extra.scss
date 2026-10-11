@@ -1,5 +1,7 @@
 @import "predefined";
 
+$soft-blue: #8fb3e0;
+
 // photo/list.html
 //
 .photo-index {
@@ -35,7 +37,7 @@
 
   &:hover img,
   &:focus-visible img {
-    box-shadow: 0 0 0 3px $theme;
+    box-shadow: 0 0 0 3px $soft-blue;
   }
 
   .photo-card-text {
@@ -148,7 +150,7 @@ a.hex-row:hover .hex-label {
 }
 
 .hex-addr {
-  color: lighten($theme, 12%);
+  color: $soft-blue;
   opacity: 1;
 }
 
