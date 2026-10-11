@@ -259,6 +259,19 @@
     "010-san-francisco.jpg": [1600, 2400],
     "title.jpg": [1500, 300]
   },
+  "2006-11-18-salton-sea": {
+    "001-salton-sea.jpg": [1800, 1800],
+    "002-salton-sea.jpg": [1800, 1800],
+    "003-salton-sea.jpg": [1800, 1800],
+    "004-salton-sea.jpg": [1800, 1800],
+    "005-salton-sea.jpg": [1800, 1800],
+    "006-salton-sea.jpg": [1800, 1800],
+    "007-salton-sea.jpg": [1800, 1800],
+    "008-salton-sea.jpg": [1800, 1800],
+    "009-salton-sea.jpg": [1800, 1800],
+    "010-salton-sea.jpg": [1800, 1800],
+    "title.jpg": [1500, 300]
+  },
   "2009-01-01-caesaria": {
     "001-caesaria.jpg": [600, 900],
     "002-caesaria.jpg": [900, 600],
