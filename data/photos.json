@@ -235,6 +235,17 @@
     "008-white-on-white.jpg": [1800, 1800],
     "title.jpg": [1500, 300]
   },
+  "2006-08-20-airshow": {
+    "001-airshow.jpg": [1600, 2400],
+    "002-airshow.jpg": [1800, 1200],
+    "003-airshow.jpg": [1800, 1200],
+    "004-airshow.jpg": [1800, 1200],
+    "005-airshow.jpg": [1800, 1200],
+    "006-airshow.jpg": [1800, 1200],
+    "007-airshow.jpg": [1800, 1200],
+    "008-airshow.jpg": [1800, 1200],
+    "title.jpg": [1500, 300]
+  },
   "2009-01-01-caesaria": {
     "001-caesaria.jpg": [600, 900],
     "002-caesaria.jpg": [900, 600],
