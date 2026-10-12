@@ -70,6 +70,15 @@
     "005-santa-barbara-pier.jpg": [1800, 1200],
     "title.jpg": [1500, 300]
   },
+  "2005-11-09-baltimore": {
+    "001-baltimore.jpg": [1600, 2400],
+    "002-baltimore.jpg": [1800, 1200],
+    "003-baltimore.jpg": [1800, 1200],
+    "004-baltimore.jpg": [1800, 1200],
+    "005-baltimore.jpg": [1800, 1200],
+    "006-baltimore.jpg": [1800, 1200],
+    "title.jpg": [1500, 300]
+  },
   "2005-11-10-new-york": {
     "001-new-york.jpg": [1600, 2400],
     "002-new-york.jpg": [1600, 2400],
