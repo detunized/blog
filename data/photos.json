@@ -342,6 +342,18 @@
     "010-san-francisco.jpg": [1600, 2400],
     "title.jpg": [1500, 300]
   },
+  "2006-09-09-big-sur": {
+    "001-big-sur.jpg": [1800, 1200],
+    "002-big-sur.jpg": [1800, 1201],
+    "003-big-sur.jpg": [1800, 1200],
+    "004-big-sur.jpg": [1800, 1200],
+    "005-big-sur.jpg": [1800, 1200],
+    "006-big-sur.jpg": [1800, 1200],
+    "007-big-sur.jpg": [1800, 1200],
+    "008-big-sur.jpg": [1800, 1200],
+    "009-big-sur.jpg": [1800, 1200],
+    "title.jpg": [1500, 300]
+  },
   "2006-11-18-salton-sea": {
     "001-salton-sea.jpg": [1800, 1800],
     "002-salton-sea.jpg": [1800, 1800],
