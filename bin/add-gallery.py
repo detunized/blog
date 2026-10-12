@@ -125,7 +125,8 @@ def main():
     parser.add_argument("--title", required=True, help='for example "Santa Monica, June 2005"')
     parser.add_argument("--event-date", required=True, help="YYYY-MM-DD, used in the folder name and to group the index")
     parser.add_argument("--slug", required=True, help="short name used in the folder and file names")
-    parser.add_argument("--images-dir", required=True, type=Path, help="local mirror of the image host's galleries/ folder")
+    parser.add_argument("--images-dir", type=Path, default=Path.home() / "stuff/blog-photos/galleries",
+                        help="the galleries/ folder that bin/deploy-photos.py deploys")
     parser.add_argument("--date", default=datetime.date.today().isoformat(), help="publication date, today by default")
     parser.add_argument("--banner", type=int, default=1, help="1-based number of the photo the banner is cut from")
     parser.add_argument("--banner-center", type=float, default=0.5, help="vertical center of the banner strip, 0 is the top")

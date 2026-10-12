@@ -21,12 +21,15 @@ Hugo site. Netlify builds and deploys every push to `master`.
 
 ## Photos
 
-- Images are not in the repo. They live on a seedbox: `https://dust.seedhost.eu/detunized/detunized.net/galleries/<folder>/` (`params.imageHost`). The ssh host is `dust.seedhost.eu` and the directory is `www/detunized.dust.seedhost.eu/detunized/detunized.net/galleries/`. The old `raw.seedhost.eu` host is dead.
+- Images are not in the repo. The master copy is `~/stuff/blog-photos/galleries/<folder>/`. It is served by the static Cloudflare Worker `detunized-photos` at `https://detunized-photos.detunized.workers.dev/galleries/<folder>/` (`params.imageHost`).
+- `bin/deploy-photos.py` checks the master copy against the gallery pages and `data/photos.json`, then deploys it. Every deploy replaces all files, so only deploy from the complete master copy.
+- Run wrangler only through that script. It runs wrangler from an empty directory, because in the blog directory wrangler detects Hugo and tries to deploy the whole site.
+- The seedbox `dust.seedhost.eu` still has a copy of the galleries up to October 2026, so links to it from elsewhere keep working. Don't upload new galleries there.
 - A gallery needs three things:
   - `content/photo/*.md` with `title`, `date` (published), `event_date` (sorts and groups the index), `folder` and `photos`.
   - Every image's size in `data/photos.json`.
   - A `title.jpg` banner in the folder.
-- `bin/add-gallery.py` exports watermarked photos and the banner to a local folder, then writes the page and the sizes. Upload with `rsync -a --chmod=D755,F644 <local>/<folder> dust.seedhost.eu:<directory above>`.
+- `bin/add-gallery.py` exports watermarked photos and the banner into the master copy and writes the page and the sizes. Run `bin/deploy-photos.py` before pushing the gallery commit.
 - `content/photo/_content.gotmpl` generates a page for every photo at `/photo/<slug>/<n>/`.
   - It reads the gallery files from disk, so a running `hugo server` needs a restart after a gallery is added.
   - The pages are `build.list: never`, which keeps them out of counts, RSS and the sitemap.
