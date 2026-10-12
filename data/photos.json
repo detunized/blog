@@ -62,6 +62,14 @@
     "026-santa-monica.jpg": [1600, 2400],
     "title.jpg": [1500, 300]
   },
+  "2005-08-28-santa-barbara-pier": {
+    "001-santa-barbara-pier.jpg": [1800, 1200],
+    "002-santa-barbara-pier.jpg": [1800, 1200],
+    "003-santa-barbara-pier.jpg": [1800, 1200],
+    "004-santa-barbara-pier.jpg": [1800, 1200],
+    "005-santa-barbara-pier.jpg": [1800, 1200],
+    "title.jpg": [1500, 300]
+  },
   "2005-11-10-new-york": {
     "001-new-york.jpg": [1600, 2400],
     "002-new-york.jpg": [1600, 2400],
