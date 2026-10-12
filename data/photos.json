@@ -52,6 +52,24 @@
     "026-santa-monica.jpg": [1600, 2400],
     "title.jpg": [1500, 300]
   },
+  "2005-11-10-new-york": {
+    "001-new-york.jpg": [1600, 2400],
+    "002-new-york.jpg": [1600, 2400],
+    "003-new-york.jpg": [1600, 2400],
+    "004-new-york.jpg": [1600, 2400],
+    "005-new-york.jpg": [1600, 2400],
+    "006-new-york.jpg": [1800, 1200],
+    "007-new-york.jpg": [1800, 1200],
+    "008-new-york.jpg": [1800, 1200],
+    "009-new-york.jpg": [1800, 1200],
+    "010-new-york.jpg": [1800, 1200],
+    "011-new-york.jpg": [1600, 2400],
+    "012-new-york.jpg": [1800, 1200],
+    "013-new-york.jpg": [1600, 2400],
+    "014-new-york.jpg": [1600, 2400],
+    "015-new-york.jpg": [1600, 2400],
+    "title.jpg": [1500, 300]
+  },
   "2005-11-14-boston": {
     "001-boston.jpg": [1800, 1200],
     "002-boston.jpg": [1800, 1200],
