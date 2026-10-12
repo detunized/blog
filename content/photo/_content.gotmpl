@@ -1,0 +1,27 @@
+{{- /* One page per photo at /photo/<gallery>/<n>/, hidden from page lists. Content adapters run before pages exist, so the gallery front matter is read from the files. */}}
+{{- $dir := "content/photo" }}
+{{- range os.ReadDir $dir }}
+  {{- if or .IsDir (strings.HasPrefix .Name "_") (not (strings.HasSuffix .Name ".md")) }}
+    {{- continue }}
+  {{- end }}
+  {{- $source := os.ReadFile (path.Join $dir .Name) }}
+  {{- $gallery := index (findRESubmatch `(?s)\A---\n(.*?)\n---\n` $source 1) 0 1 | transform.Unmarshal }}
+  {{- $name := strings.TrimSuffix ".md" .Name }}
+  {{- $slug := $gallery.slug | default (urlize $gallery.title) }}
+  {{- $count := len $gallery.photos }}
+  {{- range $i, $photo := $gallery.photos }}
+    {{- $n := add $i 1 }}
+    {{- $.AddPage (dict
+      "path" (printf "%s/%d" $name $n)
+      "title" (printf "%s · %d of %d" $gallery.title $n $count)
+      "url" (printf "/photo/%s/%d/" $slug $n)
+      "layout" "image"
+      "build" (dict "list" "never" "render" "always")
+      "params" (dict
+        "gallery" (printf "/photo/%s" $name)
+        "index" $n
+        "images" (slice (printf "%s/galleries/%s/%s" site.Params.imageHost $gallery.folder $photo))
+      )
+    ) }}
+  {{- end }}
+{{- end }}

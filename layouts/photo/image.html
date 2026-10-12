@@ -1,0 +1,77 @@
+{{ define "header" }}
+{{ partial "header.html" . }}
+{{ end }}
+
+{{ define "head" }}
+	{{- $gallery := site.GetPage .Params.gallery }}
+	{{- with site.GetPage (printf "%s/%d" $gallery.Path (add .Params.index 1)) }}
+	<link rel="prefetch" as="image" href="{{ index .Params.images 0 }}">
+	{{- end }}
+{{ end }}
+
+{{ define "main" }}
+	{{- $gallery := site.GetPage .Params.gallery }}
+	{{- $n := .Params.index }}
+	{{- $prev := site.GetPage (printf "%s/%d" $gallery.Path (sub $n 1)) }}
+	{{- $next := site.GetPage (printf "%s/%d" $gallery.Path (add $n 1)) }}
+	{{- $back := printf "%s#%d" $gallery.RelPermalink $n }}
+	{{- $image := index .Params.images 0 }}
+	{{- $size := index hugo.Data.photos $gallery.Params.folder (path.Base $image) }}
+	<main class="site-main section-inner photo-view animated fadeIn faster">
+		<nav class="photo-bar">
+			<a class="photo-gallery" rel="up" href="{{ $back }}"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>&nbsp;{{ $gallery.Title }}</a>
+			<span class="photo-pager">
+				{{- $left := `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>` | safeHTML }}
+				{{- $right := `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>` | safeHTML }}
+				{{- with $prev }}
+				<a rel="prev" href="{{ .RelPermalink }}" aria-label="Previous photo">{{ $left }}</a>
+				{{- else }}
+				<span class="photo-pager-end">{{ $left }}</span>
+				{{- end }}
+				<span class="photo-count">{{ $n }} / {{ len $gallery.Params.photos }}</span>
+				{{- with $next }}
+				<a rel="next" href="{{ .RelPermalink }}" aria-label="Next photo">{{ $right }}</a>
+				{{- else }}
+				<span class="photo-pager-end">{{ $right }}</span>
+				{{- end }}
+			</span>
+		</nav>
+		<a class="photo-frame" href="{{ with $next }}{{ .RelPermalink }}{{ else }}{{ $back }}{{ end }}">
+			<img src="{{ $image }}"
+				{{- with $size }} width="{{ index . 0 }}" height="{{ index . 1 }}"{{ end }}
+				alt="{{ .Title }}" decoding="async">
+		</a>
+	</main>
+	<script>
+		(function () {
+			function go(rel) {
+				var link = document.querySelector('.photo-bar a[rel="' + rel + '"]');
+				if (link) location.href = link.href;
+			}
+
+			document.addEventListener('keydown', function (e) {
+				if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+				var rel = { ArrowLeft: 'prev', ArrowRight: 'next', Escape: 'up' }[e.key];
+				if (rel) go(rel);
+			});
+
+			var start = null;
+			document.addEventListener('touchstart', function (e) {
+				var zoomed = window.visualViewport && window.visualViewport.scale > 1;
+				var touch = e.touches[0];
+				start = e.touches.length === 1 && !zoomed ? { x: touch.clientX, y: touch.clientY } : null;
+			}, { passive: true });
+			document.addEventListener('touchend', function (e) {
+				if (!start) return;
+				var dx = e.changedTouches[0].clientX - start.x;
+				var dy = e.changedTouches[0].clientY - start.y;
+				start = null;
+				if (Math.abs(dx) > 60 && Math.abs(dx) > 2 * Math.abs(dy)) go(dx < 0 ? 'next' : 'prev');
+			});
+		})();
+	</script>
+{{ end }}
+
+{{ define "footer" }}
+{{ partialCached "footer.html" . }}
+{{ end }}

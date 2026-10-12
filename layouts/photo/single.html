@@ -15,11 +15,14 @@
 			</header>
 			<div class="gallery-photos">
 				{{- range $i, $image := .Params.photos }}
+				{{- $n := add $i 1 }}
 				{{- $size := index $sizes $image }}
-				<img src="{{ $imageHost }}/galleries/{{ $folder }}/{{ $image }}"
-					{{- with $size }} width="{{ index . 0 }}" height="{{ index . 1 }}"{{ end }}
-					alt="{{ $.Title }}, photo {{ add $i 1 }} of {{ $count }}"
-					loading="{{ if lt $i 2 }}eager{{ else }}lazy{{ end }}" decoding="async">
+				<a id="{{ $n }}" href="{{ $.RelPermalink }}{{ $n }}/">
+					<img src="{{ $imageHost }}/galleries/{{ $folder }}/{{ $image }}"
+						{{- with $size }} width="{{ index . 0 }}" height="{{ index . 1 }}"{{ end }}
+						alt="{{ $.Title }}, photo {{ $n }} of {{ $count }}"
+						loading="{{ if lt $i 2 }}eager{{ else }}lazy{{ end }}" decoding="async">
+				</a>
 				{{- end }}
 			</div>
 		</article>
