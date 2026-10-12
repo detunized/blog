@@ -261,6 +261,17 @@
     "013-indian-market.jpg": [1800, 1200],
     "title.jpg": [1500, 300]
   },
+  "2006-05-08-las-vegas": {
+    "001-las-vegas.jpg": [1800, 1200],
+    "002-las-vegas.jpg": [1600, 2400],
+    "003-las-vegas.jpg": [1600, 2400],
+    "004-las-vegas.jpg": [1600, 2400],
+    "005-las-vegas.jpg": [1600, 2400],
+    "006-las-vegas.jpg": [1800, 1200],
+    "007-las-vegas.jpg": [1600, 2400],
+    "008-las-vegas.jpg": [1600, 2400],
+    "title.jpg": [1500, 300]
+  },
   "2006-05-10-death-valley": {
     "001-death-valley.jpg": [1800, 1200],
     "002-death-valley.jpg": [1800, 1200],
