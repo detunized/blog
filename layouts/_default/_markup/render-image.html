@@ -1,0 +1,10 @@
+{{- $src := .Destination -}}
+{{- $size := "" -}}
+{{- with .PageInner.Resources.Get .Destination -}}
+  {{- $src = .RelPermalink -}}
+  {{- if and (strings.HasSuffix (path.BaseName .Name) "@2x") (ne .MediaType.SubType "svg") -}}
+    {{- $size = printf ` width="%d" height="%d"` (div .Width 2) (div .Height 2) -}}
+  {{- end -}}
+{{- end -}}
+<img src="{{ $src | safeURL }}" alt="{{ .PlainText }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ $size | safeHTMLAttr }}>
+{{- /**/ -}}
