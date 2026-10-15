@@ -1,7 +1,7 @@
 ---
 title: "Getting the TOTP secret out of Okta Verify"
 date: 2026-10-04
-draft: true
+draft: false
 tags:
     - reverse-engineering
     - okta
